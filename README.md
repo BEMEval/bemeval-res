@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/images/bemeval_logo.png" alt="BEMEval Logo" width="200"/>
+</p>
+
 # 🏠 BEMEval-Res
 
 **Benchmark for Evaluating LLM Performance in Residential Building Energy Modeling**
