@@ -1,6 +1,6 @@
 # 🏠 BEMEval-Res
 
-**Residential Benchmark for Large Language Models in Building Energy Modeling**
+**Benchmark for Evaluating LLM Performance in Residential Building Energy Modeling**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.10+-blue.svg)]()
