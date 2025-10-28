@@ -1,0 +1,1029 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "EPC_v_H1.2 Inputs",
+    "type": "object",
+    "properties": {
+      "BuildingGeneral": {
+        "type": "object",
+        "properties": {
+          "BuildingLocation": {"type": "string"},
+          "NearestWeatherDataSource": {"type": "string"},
+          "DistanceBetweenLocationAndWeatherStation_km": {"type": "number", "minimum": 0},
+          "BuildingName": {"type": "string"},
+          "TerrainClass": {"type": "string", "enum": ["Open terrain", "Country", "Urban / City"]},
+          "BuildingTotalVentilatedVolume_m3": {"type": "number", "minimum": 0},
+          "BuildingHeight_m": {"type": "number", "minimum": 0}
+        },
+        "required": [
+          "BuildingLocation",
+          "NearestWeatherDataSource",
+          "DistanceBetweenLocationAndWeatherStation_km",
+          "BuildingName",
+          "TerrainClass",
+          "BuildingTotalVentilatedVolume_m3",
+          "BuildingHeight_m"
+        ]
+      },
+      "HeatCapacity": {
+        "type": "object",
+        "properties": {
+          "EnvelopeHeatCapacity_JK": {
+            "type": "string",
+            "description": "The total heat capacity of the building envelope.",
+            "enum": [
+                "Very Light: 80,000 * Af",
+                "Light : 110,000 * Af",
+                "Medium: 165,000 * Af",
+                "Heavy: 260,000 * Af",
+                "Very heavy: 370,000 * Af"
+            ]
+          }
+        },
+        "required": ["EnvelopeHeatCapacity_JK"]
+      },
+      "BuildingSystem": {
+        "type": "object",
+        "properties": {
+          "Lighting": {
+            "type": "object",
+            "properties": {
+              "LightingDaylightingFactor": {"type": "number", "minimum": 0, "maximum": 1},
+              "LightingOccupancyFactor": {"type": "number", "minimum": 0, "maximum": 1},
+              "LightingConstantIlluminationControlFactor": {"type": "number", "minimum": 0, "maximum": 1}
+            },
+            "required": [
+              "LightingDaylightingFactor",
+              "LightingOccupancyFactor",
+              "LightingConstantIlluminationControlFactor"
+            ]
+          },
+          "HVACSystem": {
+            "type": "object",
+            "properties": {
+              "HeatingSystemCOP_KWPerKW": {"type": "number"},
+              "CoolingSystemFullLoadCOP_KWPerKW": {"type": "number"},
+              "RelativeCOP100": {"type": "number"},
+              "PartialLoadCOP75": {"type": "number"},
+              "PartialLoadCOP50": {"type": "number"},
+              "PartialLoadCOP25": {"type": "number"},
+              "Weighting100PercentLoad": {"type": "number"},
+              "Weighting75PercentLoad": {"type": "number"},
+              "Weighting50PercentLoad": {"type": "number"},
+              "Weighting25PercentLoad": {"type": "number"},
+              "HVACSystemType": {
+                "type": "string",
+                "enum": [
+                    "1. No airco system / Water or Water&Air / NA / Yes",
+                    "2. No airco system / Water or Water&Air / NA / No",
+                    "3. No airco system / Air / NA /  Yes",
+                    "4. No airco system / Air / NA /  No",
+                    "5. Single duct system / Water or Water&Air / Water / Yes",
+                    "6 .Single duct system / Water or Water&Air / Air / Yes",
+                    "7. Single duct system / Water or Water&Air / Air / No",
+                    "8. Single duct system / Air  / Air / Yes",
+                    "9. Single duct system / Air / Air / No",
+                    "10. Dual duct system / Water or Water&Air / Water / Yes",
+                    "11. Dual duct system / Water or Water&Air / Air / Yes",
+                    "12. Dual duct system  / Water or Water&Air / Air / No",
+                    "13. Dual duct system / Air / Water / Yes",
+                    "14. Single duct , Terminal reheat / Water or Water&Air / Water / Yes",
+                    "15. Single duct , Terminal reheat  / Water or Water&Air / Air / Yes",
+                    "16. Single duct , Terminal reheat / Water or Water&Air / Air / No",
+                    "17. Constant volume / Water or Water&Air / Water / Yes",
+                    "18. Constant volume / Water or Water&Air / Air / Yes",
+                    "19. Constant volume / Water or Water&Air / Air / No",
+                    "20. Constant volume / Air  / Air / Yes",
+                    "21. Constant volume / Air / Air / No",
+                    "22. Variable air volume / Water or Water&Air / Water / Yes",
+                    "23. Variable air volume / Water or Water&Air / Air / Yes",
+                    "24. Variable air volume / Water or Water&Air / Air / No",
+                    "25. Fan coil system, 2-pipe",
+                    "26. Fan coil system, 3-pipe",
+                    "27. Fan coil system, 4-pipe",
+                    "28. Induction system, 2-pipe non change over",
+                    "29. Induction system, 2-pipe change over",
+                    "30. Induction system, 3-pipe",
+                    "31. Induction system, 4-pipe",
+                    "32. 2-pipe radiant cooling panels (chilled ceilings & passive chilled beams)",
+                    "33. 4-pipe radiant cooling panels (chilled ceilings & passive chilled beams)",
+                    "34. Embedded cooling system floors, walls or ceilings",
+                    "35. Room units including single duct units",
+                    "36. Direct expansion single split system",
+                    "37. Direct expansion single split system including variable refrigerant flow systems"
+                ]
+              },
+              "VentilationType": {
+                "type": "string",
+                "enum": [
+                    "Mechanical vent",
+                    "Mechanical vent  share w/ Natural",
+                    "Natural Vent"
+                ]
+              },
+              "MechanicalVentilationSupplyAirFlowRate_LiterPerSecond": {"type": "number"},
+              "MechanicalVentilationExhaustAirFlowRate_LiterPerSecond": {"type": "number"},
+              "HeatRecoveryType": {
+                "type": "string",
+                "enum": [
+                    "No heat recovery",
+                    "Heat exchange plates or pipes (0.65)",
+                    "Two-elements-system (0.6)",
+                    "Loading cold with air-conditioning (0.4)",
+                    "Heat-pipes (0.6)",
+                    "Slowly rotating or intermittent heat exchangers (0.7)"
+                ]
+              },
+              "ExhaustAirRecirculationPercentage": {
+                "type": "string",
+                "enum": [
+                    "No exhaust air recirculation",
+                    "Exhaust air recirculation 20%",
+                    "Exhaust air recirculation  40%",
+                    "Exhaust air recirculation  60%"
+                ]
+               },
+              "NaturalVentilationUsedForCoolingDuringUnoccupiedHours": {
+                "type": "string",
+                "enum": [
+                    "Yes",
+                    "No"
+                ]
+              },
+              "WindowAreaTotallyOpened_m2": {"type": "number"},
+              "BottomHungWindowOpeningAngle": {
+                "type": "number",
+                "enum": [0, 5, 10, 15, 20, 25, 30, 45, 60, 90, 180]
+              },
+              "BuildingAirLeakageLevel_m3PerHourPerFloorAreaAtQ4Pa": {"type": "number"},
+              "SpecificFanPower_WPerLS": {"type": "number"},
+              "FanFlowControlFactor": {"type": "number"},
+              "PumpControlForCooling": {
+                "type": "string",
+                "enum": [
+                    "No pump for cooling",
+                    "Automatic control more than 50%",
+                    "All other cases"
+                ]
+            },
+              "PumpControlForHeating": {
+                "type": "string",
+                "enum": [
+                    "No pump for heating",
+                    "Automatic control more than 50%",
+                    "All other cases"
+                ]
+            }
+            },
+            "required": [
+              "HeatingSystemCOP_KWPerKW",
+              "CoolingSystemFullLoadCOP_KWPerKW",
+              "RelativeCOP100",
+              "PartialLoadCOP75",
+              "PartialLoadCOP50",
+              "PartialLoadCOP25",
+              "Weighting100PercentLoad",
+              "Weighting75PercentLoad",
+              "Weighting50PercentLoad",
+              "Weighting25PercentLoad",
+              "HVACSystemType",
+              "VentilationType",
+              "MechanicalVentilationSupplyAirFlowRate_LiterPerSecond",
+              "MechanicalVentilationExhaustAirFlowRate_LiterPerSecond",
+              "HeatRecoveryType",
+              "ExhaustAirRecirculationPercentage",
+              "NaturalVentilationUsedForCoolingDuringUnoccupiedHours",
+              "WindowAreaTotallyOpened_m2",
+              "BottomHungWindowOpeningAngle",
+              "BuildingAirLeakageLevel_m3PerHourPerFloorAreaAtQ4Pa",
+              "SpecificFanPower_WPerLS",
+              "FanFlowControlFactor",
+              "PumpControlForCooling",
+              "PumpControlForHeating"
+            ]
+          },
+          "DomesticHotWaterSystem": {
+            "type": "object",
+            "properties": {
+              "DHWDistributionSystem": {
+                "type": "string",
+                "enum": [
+                    "All Taps Within 3m from Heat Generation",
+                    "Taps More Than 3m from Heat Generation",
+                    "Circulation system or Unknown"
+                ]
+              },
+              "DHWGenerationSystem": {
+                "type": "string",
+                "enum": [
+                    "Electric (0.75)",
+                    "VR-Boiler (0.61)",
+                    "Gas Boiler, HR-Boiler (0.75)",
+                    "Co-Generation (0.9)",
+                    "District Heating (0.9)",
+                    "Heat Pump (1.4)",
+                    "Steam (0.61)"
+                ]
+              }
+            },
+            "required": ["DHWDistributionSystem", "DHWGenerationSystem"]
+          },
+          "BuildingEnergyManagementSystem": {
+            "type": "object",
+            "properties": {
+              "TypeOfBEMSystemInstalled": {
+                "type": "number",
+                "description": "1-Class: D	No building automation function. 2-Class C:	Adapting the operation of the building and technical systems to users needs. 3-Class B:	Optimizing the operation by the tuning of the different controllers, standard alarming and monitoring functions. 4-Class A:	Detecting faults of building and technical systems and providing support to the diagnosis of these faults, Reporting information regarding energy consumption, indoor conditions, and possibilities for improvement.",
+                "enum": [1, 2, 3, 4]
+              }
+            },
+            "required": ["TypeOfBEMSystemInstalled"]
+          }
+        },
+        "required": ["Lighting", "HVACSystem", "DomesticHotWaterSystem", "BuildingEnergyManagementSystem"]
+      },
+
+      "BuildingIntegratedEnergyGenerationSystem": {
+        "type": "object",
+        "properties": {
+          "PhotovoltaicSystem": {
+            "type": "object",
+            "properties": {
+              "PVModuleSurfaceArea_m2": {"type": "number"},
+              "PVModuleOrientation": {
+                "type": "string",
+                "enum": [
+                    "S",
+                    "SE",
+                    "E",
+                    "W",
+                    "SW"
+                ]
+              },
+              "PVModuleAngle": {
+                "type": "number",
+                "enum": [0, 30, 45, 60, 90]
+              },
+              "TypeOfPVModule": {
+                "type": "string",
+                "enum": [
+                    "Mono crystalline silicona",
+                    "Multi crystalline silicona",
+                    "Thin film amorphous silicon",
+                    "Other thin film layers",
+                    "Thin film copper-indium-gallium-diselenide",
+                    "Thin film cadmium-telloride"
+                ]
+              },
+              "TypeOfBuildingIntegrationOfPVModule": {
+                "type": "string",
+                "enum": [
+                    "Unventilated modules",
+                    "Moderately ventilated modules",
+                    "Strongly ventilated of forced ventilated modules"
+                ]
+              }
+            },
+            "required": [
+              "PVModuleSurfaceArea_m2",
+              "PVModuleOrientation",
+              "PVModuleAngle",
+              "TypeOfPVModule",
+              "TypeOfBuildingIntegrationOfPVModule"
+            ]
+          },
+          "SolarWaterHeatingSystem": {
+            "type": "object",
+            "properties": {
+              "SolarCollectorSurfaceArea_m2": {"type": "number"},
+              "SHWModuleOrientation": {
+                "type": "string",
+                "enum": [
+                    "S",
+                    "SE",
+                    "E",
+                    "W",
+                    "SW"
+                ]
+              },
+              "SHWModuleAngle": {
+                "type": "number",
+                "enum": [0, 30, 45, 60, 90]
+              }
+            },
+            "required": [
+              "SolarCollectorSurfaceArea_m2",
+              "SHWModuleOrientation",
+              "SHWModuleAngle"
+            ]
+          },
+          "WindTurbineSystem": {
+            "type": "object",
+            "properties": {
+              "WindTurbineDiameter_m": {"type": "number"},
+              "WindTurbineEfficiency": {"type": "number"}
+            },
+            "required": ["WindTurbineDiameter_m", "WindTurbineEfficiency"]
+          }
+        },
+        "required": ["PhotovoltaicSystem", "SolarWaterHeatingSystem", "WindTurbineSystem"]
+      },
+      "EnergySources": {
+        "type": "object",
+        "properties": {
+          "PrimaryEnergySourceForHeating": {"type": "string", "enum": ["Electricity", "Natural Gas", "Fuel"]},
+          "PrimaryEnergySourceForDHW": {"type": "string", "enum": ["Electricity", "Natural Gas", "Fuel"]},
+          "PrimaryEnergySourceForCooling": {"type": "string", "enum": ["Electricity", "Natural Gas", "Fuel"]}
+        },
+        "required": [
+          "PrimaryEnergySourceForHeating",
+          "PrimaryEnergySourceForDHW",
+          "PrimaryEnergySourceForCooling"
+        ]
+      },
+      "PrimaryAndEmissionFactor": {
+        "type": "object",
+        "properties": {
+          "Electricity": {
+            "type": "object",
+            "properties": {
+              "PrimaryEnergyFactor": {"type": "number"},
+              "CO2EmissionCoefficient_gPerkWh": {"type": "number", "description": "CO2 Emission Coefficient in [g/kWh]"}
+            },
+            "required": [
+              "PrimaryEnergyFactor",
+              "CO2EmissionCoefficient_gPerkWh"
+            ]
+          },
+          "NaturalGas": {
+            "type": "object",
+            "properties": {
+              "PrimaryEnergyFactor": {"type": "number"},
+              "CO2EmissionCoefficient_gPerkWh": {"type": "number", "description": "CO2 Emission Coefficient in [g/kWh]"}
+            },
+            "required": [
+              "PrimaryEnergyFactor",
+              "CO2EmissionCoefficient_gPerkWh"
+            ]
+          },
+          "Fuel": {
+            "type": "object",
+            "properties": {
+              "PrimaryEnergyFactor": {"type": "number"},
+              "CO2EmissionCoefficient_gPerkWh": {"type": "number", "description": "CO2 Emission Coefficient in [g/kWh]"}
+            },
+            "required": [
+              "PrimaryEnergyFactor",
+              "CO2EmissionCoefficient_gPerkWh"
+            ]
+          }
+        },
+        "required": ["Electricity", "NaturalGas", "Fuel"]
+      },
+      "BuildingTemperatureSetPointSchedule": {
+        "type": "object",
+        "properties": {
+          "Hourly": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "Hour": {"type": "string"},
+                "WD_Tset_heat": {"type": "number"},
+                "WE_Tset_heat": {"type": "number"},
+                "WD_Tset_cool": {"type": "number"},
+                "WE_Tset_cool": {"type": "number"}
+              },
+              "required": [
+                "Hour",
+                "WD_Tset_heat",
+                "WE_Tset_heat",
+                "WD_Tset_cool",
+                "WE_Tset_cool"
+              ]
+            }
+          }
+        },
+        "required": ["Hourly"]
+      },
+      "Zone": {
+        "type": "object",
+        "properties": {
+          "Zone1": {
+            "type": "object",
+            "properties": {
+              "SpaceName": {"type": "string"},
+              "GrossFloorArea_m2": {"type": "number"},
+              "Occupancy_m2PerPerson": {"type": "number"},
+              "MetabolicRate_WPerPerson": {"type": "number"},
+              "Appliance_WPerM2": {"type": "number"},
+              "Lighting_WPerM2": {"type": "number"},
+              "OutdoorAir_LitersPerSecondPerPerson": {"type": "number"},
+              "DHW_LitersPerM2PerMonth": {"type": "number"}
+            },
+            "required": [
+              "SpaceName",
+              "GrossFloorArea_m2",
+              "Occupancy_m2PerPerson",
+              "MetabolicRate_WPerPerson",
+              "Appliance_WPerM2",
+              "Lighting_WPerM2",
+              "OutdoorAir_LitersPerSecondPerPerson",
+              "DHW_LitersPerM2PerMonth"
+            ]
+          },
+          "Zone2": {
+            "type": "object",
+            "properties": {
+              "SpaceName": {"type": "string"},
+              "GrossFloorArea_m2": {"type": "number"},
+              "Occupancy_m2PerPerson": {"type": "number"},
+              "MetabolicRate_WPerPerson": {"type": "number"},
+              "Appliance_WPerM2": {"type": "number"},
+              "Lighting_WPerM2": {"type": "number"},
+              "OutdoorAir_LitersPerSecondPerPerson": {"type": "number"},
+              "DHW_LitersPerM2PerMonth": {"type": "number"}
+            },
+            "required": [
+              "SpaceName",
+              "GrossFloorArea_m2",
+              "Occupancy_m2PerPerson",
+              "MetabolicRate_WPerPerson",
+              "Appliance_WPerM2",
+              "Lighting_WPerM2",
+              "OutdoorAir_LitersPerSecondPerPerson",
+              "DHW_LitersPerM2PerMonth"
+            ]
+          },
+          "Zone3": {
+            "type": "object",
+            "properties": {
+              "SpaceName": {"type": "string"},
+              "GrossFloorArea_m2": {"type": "number"},
+              "Occupancy_m2PerPerson": {"type": "number"},
+              "MetabolicRate_WPerPerson": {"type": "number"},
+              "Appliance_WPerM2": {"type": "number"},
+              "Lighting_WPerM2": {"type": "number"},
+              "OutdoorAir_LitersPerSecondPerPerson": {"type": "number"},
+              "DHW_LitersPerM2PerMonth": {"type": "number"}
+            },
+            "required": [
+              "SpaceName",
+              "GrossFloorArea_m2",
+              "Occupancy_m2PerPerson",
+              "MetabolicRate_WPerPerson",
+              "Appliance_WPerM2",
+              "Lighting_WPerM2",
+              "OutdoorAir_LitersPerSecondPerPerson",
+              "DHW_LitersPerM2PerMonth"
+            ]
+          },
+          "Zone4": {
+            "type": "object",
+            "properties": {
+              "SpaceName": {"type": "string"},
+              "GrossFloorArea_m2": {"type": "number"},
+              "Occupancy_m2PerPerson": {"type": "number"},
+              "MetabolicRate_WPerPerson": {"type": "number"},
+              "Appliance_WPerM2": {"type": "number"},
+              "Lighting_WPerM2": {"type": "number"},
+              "OutdoorAir_LitersPerSecondPerPerson": {"type": "number"},
+              "DHW_LitersPerM2PerMonth": {"type": "number"}
+            },
+            "required": [
+              "SpaceName",
+              "GrossFloorArea_m2",
+              "Occupancy_m2PerPerson",
+              "MetabolicRate_WPerPerson",
+              "Appliance_WPerM2",
+              "Lighting_WPerM2",
+              "OutdoorAir_LitersPerSecondPerPerson",
+              "DHW_LitersPerM2PerMonth"
+            ]
+          },
+          "Zone5": {
+            "type": "object",
+            "properties": {
+              "SpaceName": {"type": "string"},
+              "GrossFloorArea_m2": {"type": "number"},
+              "Occupancy_m2PerPerson": {"type": "number"},
+              "MetabolicRate_WPerPerson": {"type": "number"},
+              "Appliance_WPerM2": {"type": "number"},
+              "Lighting_WPerM2": {"type": "number"},
+              "OutdoorAir_LitersPerSecondPerPerson": {"type": "number"},
+              "DHW_LitersPerM2PerMonth": {"type": "number"}
+            },
+            "required": [
+              "SpaceName",
+              "GrossFloorArea_m2",
+              "Occupancy_m2PerPerson",
+              "MetabolicRate_WPerPerson",
+              "Appliance_WPerM2",
+              "Lighting_WPerM2",
+              "OutdoorAir_LitersPerSecondPerPerson",
+              "DHW_LitersPerM2PerMonth"
+            ]
+          },
+          "Zone6": {
+            "type": "object",
+            "properties": {
+              "SpaceName": {"type": "string"},
+              "GrossFloorArea_m2": {"type": "number"},
+              "Occupancy_m2PerPerson": {"type": "number"},
+              "MetabolicRate_WPerPerson": {"type": "number"},
+              "Appliance_WPerM2": {"type": "number"},
+              "Lighting_WPerM2": {"type": "number"},
+              "OutdoorAir_LitersPerSecondPerPerson": {"type": "number"},
+              "DHW_LitersPerM2PerMonth": {"type": "number"}
+            },
+            "required": [
+              "SpaceName",
+              "GrossFloorArea_m2",
+              "Occupancy_m2PerPerson",
+              "MetabolicRate_WPerPerson",
+              "Appliance_WPerM2",
+              "Lighting_WPerM2",
+              "OutdoorAir_LitersPerSecondPerPerson",
+              "DHW_LitersPerM2PerMonth"
+            ]
+          },
+          "Zone7": {
+            "type": "object",
+            "properties": {
+              "SpaceName": {"type": "string"},
+              "GrossFloorArea_m2": {"type": "number"},
+              "Occupancy_m2PerPerson": {"type": "number"},
+              "MetabolicRate_WPerPerson": {"type": "number"},
+              "Appliance_WPerM2": {"type": "number"},
+              "Lighting_WPerM2": {"type": "number"},
+              "OutdoorAir_LitersPerSecondPerPerson": {"type": "number"},
+              "DHW_LitersPerM2PerMonth": {"type": "number"}
+            },
+            "required": [
+              "SpaceName",
+              "GrossFloorArea_m2",
+              "Occupancy_m2PerPerson",
+              "MetabolicRate_WPerPerson",
+              "Appliance_WPerM2",
+              "Lighting_WPerM2",
+              "OutdoorAir_LitersPerSecondPerPerson",
+              "DHW_LitersPerM2PerMonth"
+            ]
+          },
+          "Zone8": {
+            "type": "object",
+            "properties": {
+              "SpaceName": {"type": "string"},
+              "GrossFloorArea_m2": {"type": "number"},
+              "Occupancy_m2PerPerson": {"type": "number"},
+              "MetabolicRate_WPerPerson": {"type": "number"},
+              "Appliance_WPerM2": {"type": "number"},
+              "Lighting_WPerM2": {"type": "number"},
+              "OutdoorAir_LitersPerSecondPerPerson": {"type": "number"},
+              "DHW_LitersPerM2PerMonth": {"type": "number"}
+            },
+            "required": [
+              "SpaceName",
+              "GrossFloorArea_m2",
+              "Occupancy_m2PerPerson",
+              "MetabolicRate_WPerPerson",
+              "Appliance_WPerM2",
+              "Lighting_WPerM2",
+              "OutdoorAir_LitersPerSecondPerPerson",
+              "DHW_LitersPerM2PerMonth"
+            ]
+          },
+          "Zone9": {
+            "type": "object",
+            "properties": {
+              "SpaceName": {"type": "string"},
+              "GrossFloorArea_m2": {"type": "number"},
+              "Occupancy_m2PerPerson": {"type": "number"},
+              "MetabolicRate_WPerPerson": {"type": "number"},
+              "Appliance_WPerM2": {"type": "number"},
+              "Lighting_WPerM2": {"type": "number"},
+              "OutdoorAir_LitersPerSecondPerPerson": {"type": "number"},
+              "DHW_LitersPerM2PerMonth": {"type": "number"}
+            },
+            "required": [
+              "SpaceName",
+              "GrossFloorArea_m2",
+              "Occupancy_m2PerPerson",
+              "MetabolicRate_WPerPerson",
+              "Appliance_WPerM2",
+              "Lighting_WPerM2",
+              "OutdoorAir_LitersPerSecondPerPerson",
+              "DHW_LitersPerM2PerMonth"
+            ]
+          },
+          "Zone10": {
+            "type": "object",
+            "properties": {
+              "SpaceName": {"type": "string"},
+              "GrossFloorArea_m2": {"type": "number"},
+              "Occupancy_m2PerPerson": {"type": "number"},
+              "MetabolicRate_WPerPerson": {"type": "number"},
+              "Appliance_WPerM2": {"type": "number"},
+              "Lighting_WPerM2": {"type": "number"},
+              "OutdoorAir_LitersPerSecondPerPerson": {"type": "number"},
+              "DHW_LitersPerM2PerMonth": {"type": "number"}
+            },
+            "required": [
+              "SpaceName",
+              "GrossFloorArea_m2",
+              "Occupancy_m2PerPerson",
+              "MetabolicRate_WPerPerson",
+              "Appliance_WPerM2",
+              "Lighting_WPerM2",
+              "OutdoorAir_LitersPerSecondPerPerson",
+              "DHW_LitersPerM2PerMonth"
+            ]
+          }
+        },
+        "required": ["Zone1"]
+      },
+      "ZoneSchedules": {
+        "type": "object",
+        "description": "Note: WD: Weekday, WE: Weekend, Tset,heat: Heating set-point temperature, Tset,cool: Cooling set-point temperature, Occ: Occupant, App: Appliance, Light: Lighting.",
+        "properties": {
+          "Zone1": {
+            "type": "object",
+            "properties": {
+              "Hourly": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "Hour": {"type": "string"},
+                    "Occ_WD": {"type": "number"},
+                    "Occ_WE": {"type": "number"},
+                    "App_WD": {"type": "number"},
+                    "App_WE": {"type": "number"},
+                    "Light_WD": {"type": "number"},
+                    "Light_WE": {"type": "number"}
+                  },
+                  "required": ["Hour", "Occ_WD", "Occ_WE", "App_WD", "App_WE", "Light_WD", "Light_WE"]
+                }
+              }
+            },
+            "required": ["Hourly"]
+          },
+          "Zone2": {
+            "type": "object",
+            "properties": {
+              "Hourly": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "Hour": {"type": "string"},
+                    "Occ_WD": {"type": "number"},
+                    "Occ_WE": {"type": "number"},
+                    "App_WD": {"type": "number"},
+                    "App_WE": {"type": "number"},
+                    "Light_WD": {"type": "number"},
+                    "Light_WE": {"type": "number"}
+                  },
+                  "required": ["Hour", "Occ_WD", "Occ_WE", "App_WD", "App_WE", "Light_WD", "Light_WE"]
+                }
+              }
+            },
+            "required": ["Hourly"]
+          },
+          "Zone3": {
+            "type": "object",
+            "properties": {
+              "Hourly": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "Hour": {"type": "string"},
+                    "Occ_WD": {"type": "number"},
+                    "Occ_WE": {"type": "number"},
+                    "App_WD": {"type": "number"},
+                    "App_WE": {"type": "number"},
+                    "Light_WD": {"type": "number"},
+                    "Light_WE": {"type": "number"}
+                  },
+                  "required": ["Hour", "Occ_WD", "Occ_WE", "App_WD", "App_WE", "Light_WD", "Light_WE"]
+                }
+              }
+            },
+            "required": ["Hourly"]
+          },
+          "Zone4": {
+            "type": "object",
+            "properties": {
+              "Hourly": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "Hour": {"type": "string"},
+                    "Occ_WD": {"type": "number"},
+                    "Occ_WE": {"type": "number"},
+                    "App_WD": {"type": "number"},
+                    "App_WE": {"type": "number"},
+                    "Light_WD": {"type": "number"},
+                    "Light_WE": {"type": "number"}
+                  },
+                  "required": ["Hour", "Occ_WD", "Occ_WE", "App_WD", "App_WE", "Light_WD", "Light_WE"]
+                }
+              }
+            },
+            "required": ["Hourly"]
+          },
+          "Zone5": {
+            "type": "object",
+            "properties": {
+              "Hourly": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "Hour": {"type": "string"},
+                    "Occ_WD": {"type": "number"},
+                    "Occ_WE": {"type": "number"},
+                    "App_WD": {"type": "number"},
+                    "App_WE": {"type": "number"},
+                    "Light_WD": {"type": "number"},
+                    "Light_WE": {"type": "number"}
+                  },
+                  "required": ["Hour", "Occ_WD", "Occ_WE", "App_WD", "App_WE", "Light_WD", "Light_WE"]
+                }
+              }
+            },
+            "required": ["Hourly"]
+          },
+          "Zone6": {
+            "type": "object",
+            "properties": {
+              "Hourly": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "Hour": {"type": "string"},
+                    "Occ_WD": {"type": "number"},
+                    "Occ_WE": {"type": "number"},
+                    "App_WD": {"type": "number"},
+                    "App_WE": {"type": "number"},
+                    "Light_WD": {"type": "number"},
+                    "Light_WE": {"type": "number"}
+                  },
+                  "required": ["Hour", "Occ_WD", "Occ_WE", "App_WD", "App_WE", "Light_WD", "Light_WE"]
+                }
+              }
+            },
+            "required": ["Hourly"]
+          },
+          "Zone7": {
+            "type": "object",
+            "properties": {
+              "Hourly": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "Hour": {"type": "string"},
+                    "Occ_WD": {"type": "number"},
+                    "Occ_WE": {"type": "number"},
+                    "App_WD": {"type": "number"},
+                    "App_WE": {"type": "number"},
+                    "Light_WD": {"type": "number"},
+                    "Light_WE": {"type": "number"}
+                  },
+                  "required": ["Hour", "Occ_WD", "Occ_WE", "App_WD", "App_WE", "Light_WD", "Light_WE"]
+                }
+              }
+            },
+            "required": ["Hourly"]
+          },
+          "Zone8": {
+            "type": "object",
+            "properties": {
+              "Hourly": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "Hour": {"type": "string"},
+                    "Occ_WD": {"type": "number"},
+                    "Occ_WE": {"type": "number"},
+                    "App_WD": {"type": "number"},
+                    "App_WE": {"type": "number"},
+                    "Light_WD": {"type": "number"},
+                    "Light_WE": {"type": "number"}
+                  },
+                  "required": ["Hour", "Occ_WD", "Occ_WE", "App_WD", "App_WE", "Light_WD", "Light_WE"]
+                }
+              }
+            },
+            "required": ["Hourly"]
+          },
+          "Zone9": {
+            "type": "object",
+            "properties": {
+
+
+              "Hourly": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "Hour": {"type": "string"},
+                    "Occ_WD": {"type": "number"},
+                    "Occ_WE": {"type": "number"},
+                    "App_WD": {"type": "number"},
+                    "App_WE": {"type": "number"},
+                    "Light_WD": {"type": "number"},
+                    "Light_WE": {"type": "number"}
+                  },
+                  "required": ["Hour", "Occ_WD", "Occ_WE", "App_WD", "App_WE", "Light_WD", "Light_WE"]
+                }
+              }
+            },
+            "required": ["Hourly"]
+          },
+          "Zone10": {
+            "type": "object",
+            "properties": {
+              "Hourly": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "Hour": {"type": "string"},
+                    "Occ_WD": {"type": "number"},
+                    "Occ_WE": {"type": "number"},
+                    "App_WD": {"type": "number"},
+                    "App_WE": {"type": "number"},
+                    "Light_WD": {"type": "number"},
+                    "Light_WE": {"type": "number"}
+                  },
+                  "required": ["Hour", "Occ_WD", "Occ_WE", "App_WD", "App_WE", "Light_WD", "Light_WE"]
+                }
+              }
+            },
+            "required": ["Hourly"]
+          }
+        },
+        "required": ["Zone1"]
+      },
+      "Envelope": {
+        "type": "object",
+        "properties": {
+          "S": {"$ref": "#/definitions/EnvelopeOrientation"},
+          "SE": {"$ref": "#/definitions/EnvelopeOrientation"},
+          "E": {"$ref": "#/definitions/EnvelopeOrientation"},
+          "NE": {"$ref": "#/definitions/EnvelopeOrientation"},
+          "N": {"$ref": "#/definitions/EnvelopeOrientation"},
+          "NW": {"$ref": "#/definitions/EnvelopeOrientation"},
+          "W": {"$ref": "#/definitions/EnvelopeOrientation"},
+          "SW": {"$ref": "#/definitions/EnvelopeOrientation"},
+          "RoofHor": {
+            "type": "object",
+            "properties": {
+              "Opaque1_Area_m2": {"type": "number"},
+              "Opaque2_Area_m2": {"type": "number"},
+              "Window1_Area_m2": {"type": "number"},
+              "Window1_SRF2": {"type": "number"},
+              "Window2_Area_m2": {"type": "number"},
+              "Window2_SRF2": {"type": "number"}
+            },
+            "required": [
+              "Opaque1_Area_m2",
+              "Opaque2_Area_m2",
+              "Window1_Area_m2",
+              "Window1_SRF2",
+              "Window2_Area_m2",
+              "Window2_SRF2"
+            ]
+          },
+          "BelowGrade": {
+            "type": "object",
+            "properties": {
+              "Opaque1_Area_m2": {"type": "number"},
+              "Opaque2_Area_m2": {"type": "number"}
+            },
+            "required": []
+          }
+        },
+        "required": []
+      },
+      "Material": {
+        "type": "object",
+        "properties": {
+          "Roof1": {"$ref": "#/definitions/MaterialLayerWithEmissivity"},
+          "Roof2": {"$ref": "#/definitions/MaterialLayerOptional"},
+          "Opaque1": {"$ref": "#/definitions/MaterialLayerWithEmissivity"},
+          "Opaque2": {"$ref": "#/definitions/MaterialLayerOptional"},
+          "Window1": {
+            "type": "object",
+            "properties": {
+              "Uvalue_WPerM2K": {"type": "number"},
+              "Emissivity": {"type": "number"},
+              "SolarTransmittance": {"type": "number"}
+            },
+            "required": ["Uvalue_WPerM2K", "Emissivity", "SolarTransmittance"]
+          },
+          "Window2": {
+            "type": "object",
+            "properties": {
+              "Uvalue_WPerM2K": {"type": "number"},
+              "Emissivity": {"type": "number"},
+              "SolarTransmittance": {"type": "number"}
+            }
+          }
+        },
+        "required": []
+      },
+      "CostInformation": {
+        "type": "object",
+        "properties": {
+          "AnnualEnergySaving_kW": {"type": "string"},
+          "TaxCredits_USD": {"type": "number"},
+          "ExpectedRateOfRiseInEnergyCosts": {"type": "number"},
+          "AnnualRecurringCost_Materials_USD": {"type": "number"},
+          "AnnualRecurringCost_Maintenance_USD": {"type": "number"},
+          "InitialExtraInvestment_USD": {"type": "number"},
+          "DiscountRate": {"type": "number"},
+          "ElectricityPrice_USD": {"type": "number"}
+        },
+        "required": [
+          "AnnualEnergySaving_kW",
+          "TaxCredits_USD",
+          "ExpectedRateOfRiseInEnergyCosts",
+          "AnnualRecurringCost_Materials_USD",
+          "AnnualRecurringCost_Maintenance_USD",
+          "InitialExtraInvestment_USD",
+          "DiscountRate",
+          "ElectricityPrice_USD"
+        ]
+      }
+    },
+    "required": [
+      "BuildingGeneral",
+      "HeatCapacity",
+      "BuildingSystem",
+      "BuildingIntegratedEnergyGenerationSystem",
+      "EnergySources",
+      "PrimaryAndEmissionFactor",
+      "BuildingTemperatureSetPointSchedule",
+      "Zone",
+      "ZoneSchedules",
+      "Envelope",
+      "Material",
+      "CostInformation"
+    ],
+    "definitions": {
+      "EnvelopeOrientation": {
+        "type": "object",
+        "properties": {
+          "Opaque1_Area_m2": {"type": "number"},
+          "Opaque2_Area_m2": {"type": "number"},
+          "Window1_Area_m2": {"type": "number"},
+          "Window1_OverhangAngle_degree": {"type": "number"},
+          "Window1_FinAngle_degree": {"type": "number"},
+          "Window1_HorizonAngle_degree": {"type": "number"},
+          "Window1_SRF2": {"type": "number"},
+          "Window2_Area_m2": {"type": "number"},
+          "Window2_OverhangAngle_degree": {"type": "number"},
+          "Window2_FinAngle_degree": {"type": "number"},
+          "Window2_HorizonAngle_degree": {"type": "number"},
+          "Window2_SRF2": {"type": "number"}
+        },
+        "required": [
+          "Opaque1_Area_m2",
+          "Opaque2_Area_m2",
+          "Window1_Area_m2",
+          "Window1_OverhangAngle_degree",
+          "Window1_FinAngle_degree",
+          "Window1_HorizonAngle_degree",
+          "Window1_SRF2",
+          "Window2_Area_m2",
+          "Window2_OverhangAngle_degree",
+          "Window2_FinAngle_degree",
+          "Window2_HorizonAngle_degree",
+          "Window2_SRF2"
+        ]
+      },
+      "MaterialLayerWithEmissivity": {
+        "type": "object",
+        "properties": {
+          "Uvalue_WPerM2K": {"type": "number"},
+          "AbsorptionCoefficient": {"type": "number"},
+          "Emissivity": {"type": "number"}
+        },
+        "required": ["Uvalue_WPerM2K", "AbsorptionCoefficient", "Emissivity"]
+      },
+      "MaterialLayerOptional": {
+        "type": "object",
+        "properties": {
+          "Uvalue_WPerM2K": {"type": ["number", "string"]},
+          "AbsorptionCoefficient": {"type": ["number", "string"]},
+          "Emissivity": {"type": ["number", "string"]}
+        }
+      }
+    }
+  }

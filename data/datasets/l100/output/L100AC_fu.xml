@@ -1,0 +1,740 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<HPXML xmlns='http://hpxmlonline.com/2023/09' schemaVersion='4.2'>
+  <XMLTransactionHeaderInformation>
+    <XMLType>HPXML</XMLType>
+    <XMLGeneratedBy>tasks.rb</XMLGeneratedBy>
+    <CreatedDateAndTime>2000-01-01T00:00:00-07:00</CreatedDateAndTime>
+    <Transaction>create</Transaction>
+  </XMLTransactionHeaderInformation>
+  <SoftwareInfo>
+    <extension>
+      <ApplyASHRAE140Assumptions>true</ApplyASHRAE140Assumptions>
+    </extension>
+  </SoftwareInfo>
+  <Building>
+    <BuildingID id='MyBuilding'/>
+    <ProjectStatus>
+      <EventType>proposed workscope</EventType>
+    </ProjectStatus>	
+    <BuildingDetails>
+      <BuildingSummary>
+        <Site>
+          <Surroundings>stand-alone</Surroundings>
+          <VerticalSurroundings>no units above or below</VerticalSurroundings>
+					<extension>
+						<UA>118.2</UA>
+						<ACH>0.67</ACH>
+						<Volumn>12312</Volumn>
+						<Altitude>6145</Altitude>
+						<UAinf>
+							<Units>Btu/(h*F)</Units>
+							<Value>118.2</Value>						
+						</UAinf>
+					</extension>
+        </Site>
+        <BuildingOccupancy>
+          <NumberofResidents>0.0</NumberofResidents>
+        </BuildingOccupancy>
+        <BuildingConstruction>
+          <ResidentialFacilityType>single-family detached</ResidentialFacilityType>
+          <NumberofConditionedFloors>1.0</NumberofConditionedFloors>
+          <NumberofConditionedFloorsAboveGrade>1.0</NumberofConditionedFloorsAboveGrade>
+          <AverageCeilingHeight>8.0</AverageCeilingHeight>
+          <NumberofBedrooms>3</NumberofBedrooms>
+          <ConditionedFloorArea>1539.0</ConditionedFloorArea>
+          <ConditionedBuildingVolume>12312.0</ConditionedBuildingVolume>
+        </BuildingConstruction>					
+				<extension>
+					<HEATCAP>6006</HEATCAP>
+					<UA>
+						<Units>Btu/(h*F)</Units>
+						<ExcludingInfiltration>565.5</ExcludingInfiltration>
+						<IncludingInfiltration>683.7</IncludingInfiltration>								
+					</UA>
+				</extension>
+      </BuildingSummary>
+      <ClimateandRiskZones>
+        <WeatherStation>
+          <SystemIdentifier id='WeatherStation'/>
+          <Name>USA_CO_Colorado.Springs-Peterson.Field.724660_TMY3</Name>
+					<City>Colorado Springs</City>
+					<State>CO</State>
+        </WeatherStation>
+      </ClimateandRiskZones>
+      <Enclosure>
+        <AirInfiltration>
+          <AirInfiltrationMeasurement>
+            <SystemIdentifier id='AirInfiltrationMeasurement1'/>
+            <BuildingAirLeakage>
+              <UnitofMeasure>ACHnatural</UnitofMeasure>
+              <AirLeakage>0.67</AirLeakage>
+            </BuildingAirLeakage>
+            <InfiltrationVolume>12312.0</InfiltrationVolume>
+          </AirInfiltrationMeasurement>
+        </AirInfiltration>
+        <Attics>
+          <Attic>
+            <SystemIdentifier id='Attic1'/>
+            <AtticType>
+              <Attic>
+                <Vented>true</Vented>
+              </Attic>
+            </AtticType>
+            <VentilationRate>
+              <UnitofMeasure>ACHnatural</UnitofMeasure>
+              <Value>2.4</Value>
+            </VentilationRate>
+            <AttachedToRoof idref='Roof1'/>
+            <AttachedToRoof idref='Roof2'/>
+            <AttachedToWall idref='Wall5'/>
+            <AttachedToWall idref='Wall6'/>
+            <AttachedToFloor idref='Floor2'/>						
+						<extension>
+							<ACH>
+								<HERSwAutomaticAltitudeAdjustment>2.4</HERSwAutomaticAltitudeAdjustment>
+								<HERSwSiteFixedAtSeaLevel>1.910</HERSwSiteFixedAtSeaLevel>
+							</ACH>
+							<CFM>
+								<HERSwAutomaticAltitudeAdjustment>138.5</HERSwAutomaticAltitudeAdjustment>
+								<HERSwSiteFixedAtSeaLevel>110.2</HERSwSiteFixedAtSeaLevel>
+							</CFM>
+							<InternalGains>
+								<Sensible>0</Sensible>
+								<Latent>0</Latent>
+							</InternalGains>
+						</extension>
+          </Attic>
+        </Attics>
+        <Roofs>
+          <Roof>
+            <SystemIdentifier id='Roof1'/>
+            <InteriorAdjacentTo>attic - vented</InteriorAdjacentTo>
+            <Area>811</Area>
+            <Azimuth>0</Azimuth>
+            <SolarAbsorptance>0.6</SolarAbsorptance>
+            <Emittance>0.9</Emittance>
+            <Pitch>4.0</Pitch>
+            <Insulation>
+              <SystemIdentifier id='Roof1Insulation'/>
+              <AssemblyEffectiveRValue>1.99</AssemblyEffectiveRValue>
+            </Insulation>
+						<extension>
+							<HEATCAP>1665</HEATCAP>
+						</extension>
+          </Roof>
+          <Roof>
+            <SystemIdentifier id='Roof2'/>
+            <InteriorAdjacentTo>attic - vented</InteriorAdjacentTo>
+            <Area>811</Area>
+            <Azimuth>180</Azimuth>
+            <SolarAbsorptance>0.6</SolarAbsorptance>
+            <Emittance>0.9</Emittance>
+            <Pitch>4.0</Pitch>
+            <Insulation>
+              <SystemIdentifier id='Roof2Insulation'/>
+              <AssemblyEffectiveRValue>1.99</AssemblyEffectiveRValue>
+            </Insulation>
+						<extension>
+							<HEATCAP>1665</HEATCAP>
+						</extension>
+          </Roof>
+        </Roofs>
+        <Walls>
+          <Wall>
+            <SystemIdentifier id='Wall1'/>
+            <ExteriorAdjacentTo>outside</ExteriorAdjacentTo>
+            <InteriorAdjacentTo>conditioned space</InteriorAdjacentTo>
+            <Area>456.0</Area>
+            <Azimuth>0</Azimuth>
+            <SolarAbsorptance>0.6</SolarAbsorptance>
+            <Emittance>0.9</Emittance>
+            <InteriorFinish>
+              <Type>gypsum board</Type>
+              <Thickness>0.5</Thickness>
+            </InteriorFinish>
+            <Insulation>
+              <SystemIdentifier id='Wall1Insulation'/>
+              <AssemblyEffectiveRValue>11.76</AssemblyEffectiveRValue>
+            </Insulation>						
+						<extension>
+							<UFactor>0.085</UFactor>
+							<HEATCAP>1383</HEATCAP>
+						</extension>
+          </Wall>
+          <Wall>
+            <SystemIdentifier id='Wall2'/>
+            <ExteriorAdjacentTo>outside</ExteriorAdjacentTo>
+            <InteriorAdjacentTo>conditioned space</InteriorAdjacentTo>
+            <Area>216.0</Area>
+            <Azimuth>90</Azimuth>
+            <SolarAbsorptance>0.6</SolarAbsorptance>
+            <Emittance>0.9</Emittance>
+            <InteriorFinish>
+              <Type>gypsum board</Type>
+              <Thickness>0.5</Thickness>
+            </InteriorFinish>
+            <Insulation>
+              <SystemIdentifier id='Wall2Insulation'/>
+              <AssemblyEffectiveRValue>11.76</AssemblyEffectiveRValue>
+            </Insulation>
+						<extension>
+							<UFactor>0.085</UFactor>
+							<HEATCAP>1383</HEATCAP>
+						</extension>
+          </Wall>
+          <Wall>
+            <SystemIdentifier id='Wall3'/>
+            <ExteriorAdjacentTo>outside</ExteriorAdjacentTo>
+            <InteriorAdjacentTo>conditioned space</InteriorAdjacentTo>
+            <Area>456.0</Area>
+            <Azimuth>180</Azimuth>
+            <SolarAbsorptance>0.6</SolarAbsorptance>
+            <Emittance>0.9</Emittance>
+            <InteriorFinish>
+              <Type>gypsum board</Type>
+              <Thickness>0.5</Thickness>
+            </InteriorFinish>
+            <Insulation>
+              <SystemIdentifier id='Wall3Insulation'/>
+              <AssemblyEffectiveRValue>11.76</AssemblyEffectiveRValue>
+            </Insulation>
+						<extension>
+							<UFactor>0.085</UFactor>
+							<HEATCAP>1383</HEATCAP>
+						</extension>
+          </Wall>
+          <Wall>
+            <SystemIdentifier id='Wall4'/>
+            <ExteriorAdjacentTo>outside</ExteriorAdjacentTo>
+            <InteriorAdjacentTo>conditioned space</InteriorAdjacentTo>
+            <Area>216.0</Area>
+            <Azimuth>270</Azimuth>
+            <SolarAbsorptance>0.6</SolarAbsorptance>
+            <Emittance>0.9</Emittance>
+            <InteriorFinish>
+              <Type>gypsum board</Type>
+              <Thickness>0.5</Thickness>
+            </InteriorFinish>
+            <Insulation>
+              <SystemIdentifier id='Wall4Insulation'/>
+              <AssemblyEffectiveRValue>11.76</AssemblyEffectiveRValue>
+            </Insulation>
+						<extension>
+							<UFactor>0.085</UFactor>
+							<HEATCAP>1383</HEATCAP>
+						</extension>
+          </Wall>
+          <Wall>
+            <SystemIdentifier id='Wall5'/>
+            <ExteriorAdjacentTo>outside</ExteriorAdjacentTo>
+            <InteriorAdjacentTo>attic - vented</InteriorAdjacentTo>
+            <AtticWallType>gable</AtticWallType>
+            <Area>60.8</Area>
+            <Azimuth>90</Azimuth>
+            <SolarAbsorptance>0.6</SolarAbsorptance>
+            <Emittance>0.9</Emittance>
+            <Insulation>
+              <SystemIdentifier id='Wall5Insulation'/>
+              <AssemblyEffectiveRValue>2.15</AssemblyEffectiveRValue>
+            </Insulation>
+						<extension>
+							<UFactor>0.085</UFactor>
+							<HEATCAP>1383</HEATCAP>
+						</extension>
+          </Wall>
+          <Wall>
+            <SystemIdentifier id='Wall6'/>
+            <ExteriorAdjacentTo>outside</ExteriorAdjacentTo>
+            <InteriorAdjacentTo>attic - vented</InteriorAdjacentTo>
+            <AtticWallType>gable</AtticWallType>
+            <Area>60.8</Area>
+            <Azimuth>270</Azimuth>
+            <SolarAbsorptance>0.6</SolarAbsorptance>
+            <Emittance>0.9</Emittance>
+            <Insulation>
+              <SystemIdentifier id='Wall6Insulation'/>
+              <AssemblyEffectiveRValue>2.15</AssemblyEffectiveRValue>
+            </Insulation>
+						<extension>
+							<UFactor>0.085</UFactor>
+							<HEATCAP>1383</HEATCAP>
+						</extension>
+          </Wall>
+        </Walls>
+        <Floors>
+          <Floor>
+            <SystemIdentifier id='Floor1'/>
+            <ExteriorAdjacentTo>outside</ExteriorAdjacentTo>
+            <InteriorAdjacentTo>conditioned space</InteriorAdjacentTo>
+            <FloorOrCeiling>floor</FloorOrCeiling>
+            <Area>1539.0</Area>
+            <Insulation>
+              <SystemIdentifier id='Floor1Insulation'/>
+              <AssemblyEffectiveRValue>14.15</AssemblyEffectiveRValue>
+            </Insulation>						
+						<extension>
+							<UFactor>0.071</UFactor>
+							<HEATCAP>1471</HEATCAP>
+						</extension>
+          </Floor>
+          <Floor>
+            <SystemIdentifier id='Floor2'/>
+            <ExteriorAdjacentTo>attic - vented</ExteriorAdjacentTo>
+            <InteriorAdjacentTo>conditioned space</InteriorAdjacentTo>
+            <FloorOrCeiling>ceiling</FloorOrCeiling>
+            <Area>1539.0</Area>
+            <InteriorFinish>
+              <Type>gypsum board</Type>
+              <Thickness>0.5</Thickness>
+            </InteriorFinish>
+            <Insulation>
+              <SystemIdentifier id='Floor2Insulation'/>
+              <AssemblyEffectiveRValue>18.45</AssemblyEffectiveRValue>
+            </Insulation>					
+						<extension>
+							<UFactor>0.071</UFactor>
+							<HEATCAP>1471</HEATCAP>
+						</extension>
+          </Floor>
+        </Floors>
+        <Windows>
+          <Window>
+            <SystemIdentifier id='Window1'/>
+            <Area>90.0</Area>
+            <Azimuth>0</Azimuth>
+						<FrameType>
+							<Aluminum>
+								<ThermalBreak>true</ThermalBreak>
+								<extension>
+									<Description>Aluminum sash with thermal break</Description>
+									<Area>4.04</Area>
+									<UFactor>0.971</UFactor>
+									<Width>2.75</Width>
+									<Absorptance>0.60</Absorptance>
+									<Transmittance>0.00</Transmittance>
+								</extension>
+							</Aluminum>
+						</FrameType>
+            <UFactor>1.039</UFactor>
+            <SHGC>0.67</SHGC>  
+						<!-- Add the window film with proper order -->
+						<WindowFilm>
+							<SystemIdentifier id="WindowFilm1"/>
+							<!-- Primary shading coefficient -->
+							<ShadingCoefficient>1.000</ShadingCoefficient>
+							<!-- Optional: additional user data -->
+							<extension>
+								<CompositeShadingCoefficient>0.781</CompositeShadingCoefficient>
+								<Description>Window composite air–air shading coefficient</Description>
+							</extension>
+						</WindowFilm>
+            <InteriorShading>
+              <SystemIdentifier id='Window1InteriorShading'/>
+              <Type>none</Type>
+            </InteriorShading>
+            <FractionOperable>0.0</FractionOperable>
+            <AttachedToWall idref='Wall1'/>
+          </Window>
+          <Window>
+            <SystemIdentifier id='Window2'/>
+            <Area>45.0</Area>
+            <Azimuth>90</Azimuth>
+						<FrameType>
+							<Aluminum>
+								<ThermalBreak>true</ThermalBreak>
+								<extension>
+									<Description>Aluminum sash with thermal break</Description>
+									<Area>4.04</Area>
+									<UFactor>0.971</UFactor>
+									<Width>2.75</Width>
+									<Absorptance>0.60</Absorptance>
+									<Transmittance>0.00</Transmittance>
+								</extension>
+							</Aluminum>
+						</FrameType>
+            <UFactor>1.039</UFactor>
+            <SHGC>0.67</SHGC>
+						<WindowFilm>
+							<SystemIdentifier id="WindowFilm2"/>
+							<!-- Primary shading coefficient -->
+							<ShadingCoefficient>1.000</ShadingCoefficient>
+							<!-- Optional: additional user data -->
+							<extension>
+								<CompositeShadingCoefficient>0.781</CompositeShadingCoefficient>
+								<Description>Window composite air–air shading coefficient</Description>
+							</extension>
+						</WindowFilm>
+            <InteriorShading>
+              <SystemIdentifier id='Window2InteriorShading'/>
+              <Type>none</Type>
+            </InteriorShading>
+            <FractionOperable>0.0</FractionOperable>
+            <AttachedToWall idref='Wall2'/>
+          </Window>
+          <Window>
+            <SystemIdentifier id='Window3'/>
+            <Area>90.0</Area>
+            <Azimuth>180</Azimuth>
+						<FrameType>
+							<Aluminum>
+								<ThermalBreak>true</ThermalBreak>
+								<extension>
+									<Description>Aluminum sash with thermal break</Description>
+									<Area>4.04</Area>
+									<UFactor>0.971</UFactor>
+								</extension>
+							</Aluminum>
+						</FrameType>
+            <UFactor>1.039</UFactor>
+            <SHGC>0.67</SHGC>
+						<WindowFilm>
+							<SystemIdentifier id="WindowFilm3"/>
+							<!-- Primary shading coefficient -->
+							<ShadingCoefficient>1.000</ShadingCoefficient>
+							<!-- Optional: additional user data -->
+							<extension>
+								<CompositeShadingCoefficient>0.781</CompositeShadingCoefficient>
+								<Description>Window composite air–air shading coefficient</Description>
+							</extension>
+						</WindowFilm>
+            <InteriorShading>
+              <SystemIdentifier id='Window3InteriorShading'/>
+              <Type>none</Type>
+            </InteriorShading>
+            <FractionOperable>0.0</FractionOperable>
+            <AttachedToWall idref='Wall3'/>
+          </Window>
+          <Window>
+            <SystemIdentifier id='Window4'/>
+            <Area>45.0</Area>
+            <Azimuth>270</Azimuth>
+						<FrameType>
+							<Aluminum>
+								<ThermalBreak>true</ThermalBreak>
+								<extension>
+									<Description>Aluminum sash with thermal break</Description>
+									<Area>4.04</Area>
+									<UFactor>0.971</UFactor>
+								</extension>
+							</Aluminum>
+						</FrameType>
+            <UFactor>1.039</UFactor>
+            <SHGC>0.67</SHGC>
+						<WindowFilm>
+							<SystemIdentifier id="WindowFilm4"/>
+							<!-- Primary shading coefficient -->
+							<ShadingCoefficient>1.000</ShadingCoefficient>
+							<!-- Optional: additional user data -->
+							<extension>
+								<CompositeShadingCoefficient>0.781</CompositeShadingCoefficient>
+								<Description>Window composite air–air shading coefficient</Description>
+							</extension>
+						</WindowFilm>
+            <InteriorShading>
+              <SystemIdentifier id='Window4InteriorShading'/>
+              <Type>none</Type>
+            </InteriorShading>
+            <FractionOperable>0.0</FractionOperable>
+            <AttachedToWall idref='Wall4'/>
+          </Window>
+        </Windows>
+        <Doors>
+          <Door>
+            <SystemIdentifier id='Door1'/>
+            <AttachedToWall idref='Wall3'/>
+            <Area>20.0</Area>
+            <Azimuth>180</Azimuth>
+            <RValue>3.04</RValue>
+						<extension>
+							<HEATCAP>62</HEATCAP>
+						</extension>
+          </Door>
+          <Door>
+            <SystemIdentifier id='Door2'/>
+            <AttachedToWall idref='Wall3'/>
+            <Area>20.0</Area>
+            <Azimuth>0</Azimuth>
+            <RValue>3.04</RValue>
+						<extension>
+							<HEATCAP>62</HEATCAP>
+						</extension>
+          </Door>
+        </Doors>
+				<extension>
+					<CombinedRadiativeAndConvectiveSurfaceCoefficientsFilmUVal>
+						<WallsAndDoors>
+							<Exterior>5.748</Exterior>
+							<Interior>1.46</Interior>
+						</WallsAndDoors>
+						<Ceiling>
+							<Interior>1.307</Interior>
+						</Ceiling>
+						<Roof>
+							<Exterior>5.748</Exterior>
+							<Interior>1.33</Interior>
+						</Roof>
+						<FloorAboveVentilatedCrawlSpace>
+							<Exterior>2.2</Exterior>
+							<Interior>1.307</Interior>
+						</FloorAboveVentilatedCrawlSpace>
+						<Window>
+							<Exterior>4.256</Exterior>
+							<Interior>1.46</Interior>
+						</Window>
+						<WindowFrame>
+							<Exterior>4.256</Exterior>
+							<Interior>1.46</Interior>
+						</WindowFrame>
+					</CombinedRadiativeAndConvectiveSurfaceCoefficientsFilmUVal>		
+					<SurfaceRadiativeProperties>
+						<ShortwaveAbsorptance>
+							<Exterior>0.6</Exterior>
+							<Interior>0.6</Interior>
+						</ShortwaveAbsorptance>
+						<LongwaveEmittance>
+							<Exterior>0.9</Exterior>
+							<Interior>0.9</Interior>
+						</LongwaveEmittance>
+					</SurfaceRadiativeProperties>		
+					<ExteriorNorthSouthWalls>
+						<GrossWall><Height>8.0</Height><Width>57.0</Width><Multiplier>1.0</Multiplier><Area>456</Area></GrossWall>
+						<GrossWindow><Height>5.0</Height><Width>3.0</Width><Multiplier>6.0</Multiplier><Area>90</Area></GrossWindow>
+						<WindowFrameOnly><Area>24.2</Area><InsideSolarFraction>0.0031</InsideSolarFraction></WindowFrameOnly>
+						<Door><Height>6.7</Height><Width>3.0</Width><Multiplier>1.0</Multiplier><Area>20</Area><InsideSolarFraction>0.0026</InsideSolarFraction></Door>
+						<InsulatedWall><Area>259.5</Area><InsideSolarFraction>0.0332</InsideSolarFraction></InsulatedWall>
+						<FramedWall><Area>86.5</Area><InsideSolarFraction>0.0111</InsideSolarFraction></FramedWall>
+					</ExteriorNorthSouthWalls>							
+					<ExteriorEastWestWalls>
+						<GrossWall><Height>8.0</Height><Width>57.0</Width><Multiplier>1.0</Multiplier><Area>216</Area></GrossWall>
+						<GrossWindow><Height>5.0</Height><Width>3.0</Width><Multiplier>3.0</Multiplier><Area>45</Area></GrossWindow>
+						<WindowFrameOnly><Area>12.1</Area><InsideSolarFraction>0.0016</InsideSolarFraction></WindowFrameOnly>
+						<InsulatedWall><Area>128.3</Area><InsideSolarFraction>0.0164</InsideSolarFraction></InsulatedWall>
+						<FramedWall><Area>42.8</Area><InsideSolarFraction>0.0055</InsideSolarFraction></FramedWall>
+					</ExteriorEastWestWalls>										
+					<InteriorWalls>
+						<GrossWall><Height>8.0</Height><Width>128.0</Width><Area>1024</Area></GrossWall>
+						<UnframedWall><Area>921.6</Area><InsideSolarFraction>0.1179</InsideSolarFraction></UnframedWall>
+						<FramedWall><Area>102.4</Area><InsideSolarFraction>0.0131</InsideSolarFraction></FramedWall>
+						<IntSurfCoef><UFactor>1.460</UFactor></IntSurfCoef>
+						<Plasterboard><Thickness>0.5</Thickness><UFactor>2.222</UFactor><k>0.0926</k><Density>50.0</Density><Cp>0.26</Cp></Plasterboard>
+						<Frame2x416OC><Thickness>3.5</Thickness><UFactor>0.229</UFactor><k>0.0667</k><Density>32.0</Density><Cp>0.33</Cp></Frame2x416OC>
+					</InteriorWalls>		
+					<FloorCeiling>
+						<GrossFloorCeiling><Height>57.0</Height><Width>27.0</Width><Multiplier>1.0</Multiplier><Area>1539</Area></GrossFloorCeiling>
+						<InsulatedFloorCeiling><Area>1385.1</Area><InsideSolarFraction>0.1772</InsideSolarFraction></InsulatedFloorCeiling>
+						<FramedFloorCeiling><Area>153.9</Area><InsideSolarFraction>0.0197</InsideSolarFraction></FramedFloorCeiling>
+					</FloorCeiling>		
+					<Roof>
+						<RoofDeck><Height>57.0</Height><Width>14.2</Width><Multiplier>2.0</Multiplier><Area>1622.2</Area></RoofDeck>
+						<AtticEastWestGable><Height>4.5</Height><Width>27.0</Width><Multiplier>2.0</Multiplier><Area>121.5</Area></AtticEastWestGable>
+						<IntSurfCoef><UFactor>1.330</UFactor></IntSurfCoef>
+						<Plywood><Thickness>0.5</Thickness><UFactor>1.601</UFactor><k>0.0667</k><Density>34.0</Density><Cp>0.29</Cp></Plywood>
+						<AsphaltShingle><Thickness>0.25</Thickness><UFactor>2.273</UFactor><k>0.0473</k><Density>70.0</Density><Cp>0.30</Cp></AsphaltShingle>
+						<ExtSurfCoef><UFactor>5.748</UFactor></ExtSurfCoef>
+						<TotalAirAir><UFactor>0.502</UFactor></TotalAirAir>
+					</Roof>						
+					<TransmittedSolarInteriorDistributionSummary>
+						<TotalOpaqueInteriorSurfaceArea><Area>6272.7</Area><InsideSolarFraction>0.8024</InsideSolarFraction></TotalOpaqueInteriorSurfaceArea>
+						<SolarToAir><InsideSolarFraction>0.175</InsideSolarFraction></SolarToAir>
+						<SolarLost><InsideSolarFraction>0.0226</InsideSolarFraction></SolarLost>
+					</TransmittedSolarInteriorDistributionSummary>									
+					<ExteriorWall>
+						<IntSurfCoef><UFactor>1.460</UFactor></IntSurfCoef>
+						<Plasterboard><Thickness>0.5</Thickness><UFactor>2.222</UFactor><k>0.0926</k><Density>50.0</Density><Cp>0.26</Cp></Plasterboard>
+						<FiberglassBatt><Thickness>3.5</Thickness><UFactor>0.091</UFactor><k>0.0265</k><Density>0.6</Density><Cp>0.20</Cp></FiberglassBatt>
+						<Frame2x416OC><Thickness>3.5</Thickness><UFactor>0.229</UFactor><k>0.0667</k><Density>32.0</Density><Cp>0.33</Cp></Frame2x416OC>
+						<FiberboardSheathing><Thickness>0.5</Thickness><UFactor>0.758</UFactor><k>0.0316</k><Density>18.0</Density><Cp>0.31</Cp></FiberboardSheathing>
+						<HardboardSiding><Thickness>0.44</Thickness><UFactor>1.492</UFactor><k>0.0544</k><Density>40.0</Density><Cp>0.28</Cp></HardboardSiding>
+						<ExtSurfCoef><UFactor>5.748</UFactor></ExtSurfCoef>
+						<TotalAirAirInsulatedSection><UFactor>0.070</UFactor></TotalAirAirInsulatedSection>
+						<TotalAirAirFrameSection><UFactor>0.130</UFactor></TotalAirAirFrameSection>
+						<TotalAirAirCompositeSection><UFactor>0.085</UFactor></TotalAirAirCompositeSection>
+						<TotalSurfSurfInsulatedSection><UFactor>0.074</UFactor></TotalSurfSurfInsulatedSection>
+						<TotalSurfSurfFrameSection><UFactor>0.147</UFactor></TotalSurfSurfFrameSection>
+						<TotalSurfSurfCompositeSection><UFactor>0.092</UFactor></TotalSurfSurfCompositeSection>
+					</ExteriorWall>						
+					<Door>
+						<SolidCoreDoor><Thickness>1.75</Thickness><UFactor>0.459</UFactor><k>0.0669</k><Density>32.0</Density><Cp>0.33</Cp></SolidCoreDoor>
+						<IntSurfCoef><UFactor>0.329</UFactor></IntSurfCoef>
+						<TotalAirAirDoorOnly><UFactor>0.329</UFactor></TotalAirAirDoorOnly>
+					</Door>				
+					<WindowSummary>
+						<IntSurfCoefGlass><UFactor>1.460</UFactor></IntSurfCoefGlass>
+						<IntSurfCoefFrame><UFactor>1.460</UFactor></IntSurfCoefFrame>
+						<GlassPane><Thickness>0.118</Thickness><Area>10.96</Area><UFactor>49.371</UFactor><SHGC>0.857</SHGC><Trans>0.837</Trans><ShadingCoefficient>1.000</ShadingCoefficient></GlassPane>
+						<AluminumSashThermalBreak><Area>4.04</Area><UFactor>9.096</UFactor></AluminumSashThermalBreak>
+						<ExtSurfCoef><UFactor>4.256</UFactor></ExtSurfCoef>
+						<WindowCompositeAirAir><Area>15.00</Area><UFactor>1.039</UFactor><SHGC>0.670</SHGC><Trans>0.612</Trans><ShadingCoefficient>0.781</ShadingCoefficient></WindowCompositeAirAir>
+						<GrossWindow><UFactor>1.039</UFactor><SHGC>0.670</SHGC><ShadingCoefficient>0.781</ShadingCoefficient></GrossWindow>
+						<GeneralArea>
+							<GrossWindow>15.00</GrossWindow>
+							<EdgeOfGlass>3.57</EdgeOfGlass>
+							<CenterOfGlass>7.39</CenterOfGlass>
+							<NetGlass>10.96</NetGlass>
+						</GeneralArea>			
+						<ThermalProperties>
+							<Frame><Conductance>0.971</Conductance><AssemblyEffectiveRValue>1.030</AssemblyEffectiveRValue></Frame>
+							<EdgeOfGlass><Conductance>1.064</Conductance><AssemblyEffectiveRValue>0.940</AssemblyEffectiveRValue></EdgeOfGlass>
+							<CenterOfGlass><Conductance>1.064</Conductance><AssemblyEffectiveRValue>0.940</AssemblyEffectiveRValue></CenterOfGlass>
+							<NetGlass><Conductance>1.064</Conductance><AssemblyEffectiveRValue>0.940</AssemblyEffectiveRValue></NetGlass>
+							<GrossWindow><Conductance>1.039</Conductance><AssemblyEffectiveRValue>0.963</AssemblyEffectiveRValue></GrossWindow>
+							<ExteriorSurfCoefGlassAndFrame><Conductance>4.256</Conductance></ExteriorSurfCoefGlassAndFrame>
+							<InteriorSurfaceCoefficientConductance><Glass>1.460</Glass><Frame>1.460</Frame></InteriorSurfaceCoefficientConductance>
+						</ThermalProperties>				
+					</WindowSummary>
+					<FloorOverVentedCrawlSpace>
+						<IntSurfCoef><UFactor>1.307</UFactor></IntSurfCoef>
+						<CarpetFibrousPad><UFactor>0.481</UFactor><Cp>0.34</Cp></CarpetFibrousPad>
+						<Plywood><Thickness>0.75</Thickness><UFactor>1.067</UFactor><k>0.0667</k><Density>34.0</Density><Cp>0.29</Cp></Plywood>
+						<FiberglassBatt><Thickness>3.5</Thickness><UFactor>0.091</UFactor><k>0.0265</k><Density>0.6</Density><Cp>0.20</Cp></FiberglassBatt>
+						<Joists2x816OC><Thickness>3.5</Thickness><UFactor>0.229</UFactor><k>0.0667</k><Density>32.0</Density><Cp>0.33</Cp></Joists2x816OC>
+						<ExtSurfCoef><UFactor>2.200</UFactor></ExtSurfCoef>
+						<TotalAirAirInsulatedSection><UFactor>0.066</UFactor></TotalAirAirInsulatedSection>
+						<TotalAirAirFrameSection><UFactor>0.116</UFactor></TotalAirAirFrameSection>
+						<TotalAirAirCompositeSection><UFactor>0.071</UFactor></TotalAirAirCompositeSection>
+						<TotalSurfSurfCompositeSection><UFactor>0.077</UFactor></TotalSurfSurfCompositeSection>
+					</FloorOverVentedCrawlSpace>
+					<Ceiling>
+						<IntSurfCoef><UFactor>1.307</UFactor></IntSurfCoef>
+						<Plasterboard><Thickness>0.5</Thickness><UFactor>2.222</UFactor><k>0.0926</k><Density>50.0</Density><Cp>0.26</Cp></Plasterboard>
+						<FiberglassBatt><Thickness>6.25</Thickness><UFactor>0.053</UFactor><k>0.0274</k><Density>0.6</Density><Cp>0.20</Cp></FiberglassBatt>
+						<Joists2x624OC><Thickness>5.5</Thickness><UFactor>0.146</UFactor><k>0.0667</k><Density>32.0</Density><Cp>0.33</Cp></Joists2x624OC>
+						<TotalAirAirInsulatedSection><UFactor>0.048</UFactor></TotalAirAirInsulatedSection>
+						<TotalAirAirFramedSection><UFactor>0.113</UFactor></TotalAirAirFramedSection>
+						<TotalAirAirCompositeSection><UFactor>0.054</UFactor></TotalAirAirCompositeSection>
+						<TotalSurfSurfCompositeSection><UFactor>0.059</UFactor></TotalSurfSurfCompositeSection>
+					</Ceiling>
+					<EndGables>
+						<IntSurfCoef><UFactor>1.460</UFactor></IntSurfCoef>
+						<Plywood><Thickness>0.5</Thickness><UFactor>1.601</UFactor><k>0.0667</k><Density>34.0</Density><Cp>0.29</Cp></Plywood>
+						<HardboardSiding><Thickness>0.44</Thickness><UFactor>1.492</UFactor><k>0.0544</k><Density>40.0</Density><Cp>0.28</Cp></HardboardSiding>
+						<ExtSurfCoef><UFactor>5.748</UFactor></ExtSurfCoef>
+						<TotalAirAir><UFactor>0.464</UFactor></TotalAirAir>
+					</EndGables>
+					<TotalRoofGableUA><Value>1711</Value></TotalRoofGableUA>					
+					<CeilingAtticAir>
+						<IntSurfCoef><UFactor>1.307</UFactor></IntSurfCoef>
+						<Plasterboard><Thickness>0.5</Thickness><UFactor>2.222</UFactor><k>0.0926</k><Density>50.0</Density><Cp>0.26</Cp></Plasterboard>
+						<FiberglassBatt><Thickness>6.25</Thickness><UFactor>0.053</UFactor><k>0.0274</k><Density>0.6</Density><Cp>0.20</Cp></FiberglassBatt>
+						<Joists24OC><Thickness>5.5</Thickness><UFactor>0.146</UFactor><k>0.0667</k><Density>32.0</Density><Cp>0.33</Cp></Joists24OC>
+						<AtticAirSpace><UFactor>0.645</UFactor></AtticAirSpace>
+					</CeilingAtticAir>			
+					<RoofDeckAndGablePropertiesScaledToCeilingArea>
+						<PlywoodHalfInch><Thickness>0.5</Thickness><UFactor>1.940</UFactor><k>0.0808</k><Density>41.2</Density><Cp>0.29</Cp></PlywoodHalfInch>
+						<HybridShingleSiding><Thickness>0.25</Thickness><UFactor>2.605</UFactor><k>0.0543</k><Density>84.8</Density><Cp>0.30</Cp></HybridShingleSiding>
+						<TotalRoofDeckGable><UFactor>1.412</UFactor></TotalRoofDeckGable>
+					</RoofDeckAndGablePropertiesScaledToCeilingArea>
+					<ExtSurfCoef><UFactor>6.967</UFactor></ExtSurfCoef>
+					<SummaryCeilingAtticRoof>
+						<TotalAirAirInsulatedSection><UFactor>0.044</UFactor></TotalAirAirInsulatedSection>
+						<TotalAirAirFramedSection><UFactor>0.094</UFactor></TotalAirAirFramedSection>
+						<TotalCompositeAirAir><UFactor>0.049</UFactor></TotalCompositeAirAir>
+						<TotalCompositeSurfSurf><UFactor>0.051</UFactor></TotalCompositeSurfSurf>
+					</SummaryCeilingAtticRoof>	
+				<GlazingSummarySinglePaneCenterOfGlassValues>
+					<GeneralProperties><NumberOfPanes>1</NumberOfPanes><PaneThickness>0.118</PaneThickness></GeneralProperties>
+					<SinglePaneOpticalProperties>
+						<Transmittance>0.837</Transmittance>
+						<Reflectance>0.075</Reflectance>
+						<Absorptance>0.088</Absorptance>
+						<IndexOfRefraction>1.5223</IndexOfRefraction>
+						<ExtinctionCoefficient>0.7806</ExtinctionCoefficient>
+						<SolarHeatGainCoefficient>0.857</SolarHeatGainCoefficient>
+						<ShadingCoefficient>1.000</ShadingCoefficient>
+					</SinglePaneOpticalProperties>
+					<ThermalProperties>
+						<GlassConductivity>0.520</GlassConductivity>
+						<GlassPane>
+							<Conductance>52.881</Conductance>
+							<AssemblyEffectiveRValue>0.019</AssemblyEffectiveRValue>
+						</GlassPane>
+						<ExteriorCombinedSurface>
+							<Coefficient>4.256</Coefficient>
+							<AssemblyEffectiveRValue>0.235</AssemblyEffectiveRValue>
+						</ExteriorCombinedSurface>
+						<InteriorCombinedSurface>
+							<Coefficient>1.460</Coefficient>
+							<AssemblyEffectiveRValue>0.685</AssemblyEffectiveRValue>
+						</InteriorCombinedSurface>
+						<AirToAmbientAir>
+							<UFactor>1.064</UFactor>
+							<AssemblyEffectiveRValue>0.940</AssemblyEffectiveRValue>
+						</AirToAmbientAir>
+						<HemisphericalInfraredEmittance>0.84</HemisphericalInfraredEmittance>
+						<InfraredTransmittance>0</InfraredTransmittance>
+						<GlassDensity>154</GlassDensity>
+						<SpecificHeat>0.18</SpecificHeat>
+					</ThermalProperties>
+					<OpticalPropertie>
+						<AngleData Angle="0"><Trans>0.837</Trans><Refl>0.075</Refl><Abs>0.088</Abs><SHGC>0.857</SHGC></AngleData>
+						<AngleData Angle="10"><Trans>0.836</Trans><Refl>0.075</Refl><Abs>0.089</Abs><SHGC>0.857</SHGC></AngleData>
+						<AngleData Angle="20"><Trans>0.835</Trans><Refl>0.075</Refl><Abs>0.080</Abs><SHGC>0.856</SHGC></AngleData>
+						<AngleData Angle="30"><Trans>0.830</Trans><Refl>0.077</Refl><Abs>0.093</Abs><SHGC>0.852</SHGC></AngleData>
+						<AngleData Angle="40"><Trans>0.821</Trans><Refl>0.083</Refl><Abs>0.097</Abs><SHGC>0.843</SHGC></AngleData>
+						<AngleData Angle="50"><Trans>0.800</Trans><Refl>0.089</Refl><Abs>0.104</Abs><SHGC>0.823</SHGC></AngleData>
+						<AngleData Angle="60"><Trans>0.752</Trans><Refl>0.143</Refl><Abs>0.105</Abs><SHGC>0.776</SHGC></AngleData>
+						<AngleData Angle="70"><Trans>0.639</Trans><Refl>0.253</Refl><Abs>0.108</Abs><SHGC>0.664</SHGC></AngleData>
+						<AngleData Angle="80"><Trans>0.390</Trans><Refl>0.505</Refl><Abs>0.105</Abs><SHGC>0.414</SHGC></AngleData>
+						<AngleData Angle="90"><Trans>0.000</Trans><Refl>1.000</Refl><Abs>0.000</Abs><SHGC>0.000</SHGC></AngleData>
+						<AngleData Angle="Hemis"><Trans>0.756</Trans><Refl>0.136</Refl><Abs>0.098</Abs><SHGC>0.779</SHGC></AngleData>
+					</OpticalPropertie>							
+				</GlazingSummarySinglePaneCenterOfGlassValues>
+				</extension>
+      </Enclosure>
+      <Systems>
+        <HVAC>
+					<HVACPlant>
+						<HeatingSystem>
+							<SystemIdentifier id="htg1"/>
+							<HeatingCapacity>3413</HeatingCapacity>
+							<FractionHeatLoadServed>1.0</FractionHeatLoadServed>
+						</HeatingSystem>
+						<CoolingSystem>
+							<SystemIdentifier id="clg1"/>
+							<CoolingCapacity>3413</CoolingCapacity>
+							<FractionCoolLoadServed>1.0</FractionCoolLoadServed>
+						</CoolingSystem>
+					</HVACPlant>
+          <HVACControl>
+            <SystemIdentifier id='HVACControl1'/>
+            <SetpointTempHeatingSeason>68.0</SetpointTempHeatingSeason>
+            <SetpointTempCoolingSeason>78.0</SetpointTempCoolingSeason>
+          </HVACControl>
+        </HVAC>
+      </Systems>
+      <MiscLoads>
+        <PlugLoad>
+          <SystemIdentifier id='PlugLoad1'/>
+          <PlugLoadType>other</PlugLoadType>
+          <Load>
+            <Units>kWh/year</Units>
+            <Value>7302.0</Value>
+          </Load>
+          <extension>
+            <FracSensible>0.822</FracSensible>
+            <FracLatent>0.178</FracLatent>
+            <WeekdayScheduleFractions>0.0203, 0.0203, 0.0203, 0.0203, 0.0203, 0.0339, 0.0426, 0.0852, 0.0497, 0.0304, 0.0304, 0.0406, 0.0304, 0.0254, 0.0264, 0.0264, 0.0386, 0.0416, 0.0447, 0.0700, 0.0700, 0.0731, 0.0731, 0.0660</WeekdayScheduleFractions>
+            <WeekendScheduleFractions>0.0203, 0.0203, 0.0203, 0.0203, 0.0203, 0.0339, 0.0426, 0.0852, 0.0497, 0.0304, 0.0304, 0.0406, 0.0304, 0.0254, 0.0264, 0.0264, 0.0386, 0.0416, 0.0447, 0.0700, 0.0700, 0.0731, 0.0731, 0.0660</WeekendScheduleFractions>
+            <MonthlyScheduleMultipliers>1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0</MonthlyScheduleMultipliers>
+          </extension>
+        </PlugLoad>
+      </MiscLoads>
+			<extension>
+				<ConditionedZone>
+					<ACH>
+						<HERSwAutomaticAltitudeAdjustment>0.67</HERSwAutomaticAltitudeAdjustment>
+						<HERSwSiteFixedAtSeaLevel>0.533</HERSwSiteFixedAtSeaLevel>
+					</ACH>
+					<CFM>
+						<HERSwAutomaticAltitudeAdjustment>137.6</HERSwAutomaticAltitudeAdjustment>
+						<HERSwSiteFixedAtSeaLevel>109.4</HERSwSiteFixedAtSeaLevel>
+					</CFM>
+					<InternalGains>
+						<Sensible>56106</Sensible>
+						<Latent>12156</Latent>
+					</InternalGains>
+				</ConditionedZone>	
+			</extension>
+    </BuildingDetails>
+  </Building>
+</HPXML>

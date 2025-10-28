@@ -1,0 +1,644 @@
+[BuildingGeneral]
+BuildingLocation = "Denver, Colorado, USA"
+NearestWeatherDataSource = "USA_CO_Denver.Intl.AP.725650_TMY3"
+DistanceBetweenLocationAndWeatherStation_km = 50
+BuildingName = "iUnit"
+TerrainClass = "Urban / City"
+BuildingTotalVentilatedVolume_m3 = 96.315
+BuildingHeight_m = 2.743
+
+[HeatCapacity]
+EnvelopeHeatCapacity_JK = "Medium: 165,000 * Af"
+
+[BuildingSystem.Lighting]
+LightingDaylightingFactor = 0.7
+LightingOccupancyFactor = 0.9
+LightingConstantIlluminationControlFactor = 1.0
+
+[BuildingSystem.HVACSystem]
+HeatingSystemCOP_KWPerKW = 3.5
+CoolingSystemFullLoadCOP_KWPerKW = 3.0
+RelativeCOP100 = 1.0
+PartialLoadCOP75 = 0.9
+PartialLoadCOP50 = 0.85
+PartialLoadCOP25 = 0.75
+Weighting100PercentLoad = 0.3
+Weighting75PercentLoad = 0.3
+Weighting50PercentLoad = 0.3
+Weighting25PercentLoad = 0.1
+HVACSystemType = "36. Direct expansion single split system"
+VentilationType = "Mechanical vent"
+MechanicalVentilationSupplyAirFlowRate_LiterPerSecond = 20
+MechanicalVentilationExhaustAirFlowRate_LiterPerSecond = 20
+HeatRecoveryType = "No heat recovery"
+ExhaustAirRecirculationPercentage = "No exhaust air recirculation"
+NaturalVentilationUsedForCoolingDuringUnoccupiedHours = "No"
+WindowAreaTotallyOpened_m2 = 0
+BottomHungWindowOpeningAngle = 10
+BuildingAirLeakageLevel_m3PerHourPerFloorAreaAtQ4Pa = 1
+SpecificFanPower_WPerLS = 1.5
+FanFlowControlFactor = 1.0
+PumpControlForCooling = "No pump for cooling"
+PumpControlForHeating = "No pump for heating"
+
+[BuildingSystem.DomesticHotWaterSystem]
+DHWDistributionSystem = "All Taps Within 3m from Heat Generation"
+DHWGenerationSystem = "Heat Pump (1.4)"
+
+[BuildingSystem.BuildingEnergyManagementSystem]
+TypeOfBEMSystemInstalled = 2
+
+[BuildingIntegratedEnergyGenerationSystem.PhotovoltaicSystem]
+PVModuleSurfaceArea_m2 = 0
+PVModuleOrientation = "S"
+PVModuleAngle = 30
+TypeOfPVModule = "Mono crystalline silicona"
+TypeOfBuildingIntegrationOfPVModule = "Moderately ventilated modules"
+
+[BuildingIntegratedEnergyGenerationSystem.SolarWaterHeatingSystem]
+SolarCollectorSurfaceArea_m2 = 0
+SHWModuleOrientation = "S"
+SHWModuleAngle = 30
+
+[BuildingIntegratedEnergyGenerationSystem.WindTurbineSystem]
+WindTurbineDiameter_m = 0
+WindTurbineEfficiency = 0
+
+[EnergySources]
+PrimaryEnergySourceForHeating = "Electricity"
+PrimaryEnergySourceForDHW = "Electricity"
+PrimaryEnergySourceForCooling = "Electricity"
+
+[PrimaryAndEmissionFactor.Electricity]
+PrimaryEnergyFactor = 2.5
+CO2EmissionCoefficient_gPerkWh = 400
+
+[PrimaryAndEmissionFactor.NaturalGas]
+PrimaryEnergyFactor = 1.1
+CO2EmissionCoefficient_gPerkWh = 200
+
+[PrimaryAndEmissionFactor.Fuel]
+PrimaryEnergyFactor = 1.2
+CO2EmissionCoefficient_gPerkWh = 250
+
+[BuildingTemperatureSetPointSchedule]
+# 24 hourly entries:
+[[BuildingTemperatureSetPointSchedule.Hourly]]
+Hour = "00:00"
+WD_Tset_heat = 20
+WE_Tset_heat = 20
+WD_Tset_cool = 24
+WE_Tset_cool = 24
+
+[[BuildingTemperatureSetPointSchedule.Hourly]]
+Hour = "01:00"
+WD_Tset_heat = 20
+WE_Tset_heat = 20
+WD_Tset_cool = 24
+WE_Tset_cool = 24
+
+[[BuildingTemperatureSetPointSchedule.Hourly]]
+Hour = "02:00"
+WD_Tset_heat = 20
+WE_Tset_heat = 20
+WD_Tset_cool = 24
+WE_Tset_cool = 24
+
+[[BuildingTemperatureSetPointSchedule.Hourly]]
+Hour = "03:00"
+WD_Tset_heat = 20
+WE_Tset_heat = 20
+WD_Tset_cool = 24
+WE_Tset_cool = 24
+
+[[BuildingTemperatureSetPointSchedule.Hourly]]
+Hour = "04:00"
+WD_Tset_heat = 20
+WE_Tset_heat = 20
+WD_Tset_cool = 24
+WE_Tset_cool = 24
+
+[[BuildingTemperatureSetPointSchedule.Hourly]]
+Hour = "05:00"
+WD_Tset_heat = 20
+WE_Tset_heat = 20
+WD_Tset_cool = 24
+WE_Tset_cool = 24
+
+[[BuildingTemperatureSetPointSchedule.Hourly]]
+Hour = "06:00"
+WD_Tset_heat = 20
+WE_Tset_heat = 20
+WD_Tset_cool = 24
+WE_Tset_cool = 24
+
+[[BuildingTemperatureSetPointSchedule.Hourly]]
+Hour = "07:00"
+WD_Tset_heat = 20
+WE_Tset_heat = 20
+WD_Tset_cool = 24
+WE_Tset_cool = 24
+
+[[BuildingTemperatureSetPointSchedule.Hourly]]
+Hour = "08:00"
+WD_Tset_heat = 20
+WE_Tset_heat = 20
+WD_Tset_cool = 24
+WE_Tset_cool = 24
+
+[[BuildingTemperatureSetPointSchedule.Hourly]]
+Hour = "09:00"
+WD_Tset_heat = 20
+WE_Tset_heat = 20
+WD_Tset_cool = 24
+WE_Tset_cool = 24
+
+[[BuildingTemperatureSetPointSchedule.Hourly]]
+Hour = "10:00"
+WD_Tset_heat = 20
+WE_Tset_heat = 20
+WD_Tset_cool = 24
+WE_Tset_cool = 24
+
+[[BuildingTemperatureSetPointSchedule.Hourly]]
+Hour = "11:00"
+WD_Tset_heat = 20
+WE_Tset_heat = 20
+WD_Tset_cool = 24
+WE_Tset_cool = 24
+
+[[BuildingTemperatureSetPointSchedule.Hourly]]
+Hour = "12:00"
+WD_Tset_heat = 20
+WE_Tset_heat = 20
+WD_Tset_cool = 24
+WE_Tset_cool = 24
+
+[[BuildingTemperatureSetPointSchedule.Hourly]]
+Hour = "13:00"
+WD_Tset_heat = 20
+WE_Tset_heat = 20
+WD_Tset_cool = 24
+WE_Tset_cool = 24
+
+[[BuildingTemperatureSetPointSchedule.Hourly]]
+Hour = "14:00"
+WD_Tset_heat = 20
+WE_Tset_heat = 20
+WD_Tset_cool = 24
+WE_Tset_cool = 24
+
+[[BuildingTemperatureSetPointSchedule.Hourly]]
+Hour = "15:00"
+WD_Tset_heat = 20
+WE_Tset_heat = 20
+WD_Tset_cool = 24
+WE_Tset_cool = 24
+
+[[BuildingTemperatureSetPointSchedule.Hourly]]
+Hour = "16:00"
+WD_Tset_heat = 20
+WE_Tset_heat = 20
+WD_Tset_cool = 24
+WE_Tset_cool = 24
+
+[[BuildingTemperatureSetPointSchedule.Hourly]]
+Hour = "17:00"
+WD_Tset_heat = 20
+WE_Tset_heat = 20
+WD_Tset_cool = 24
+WE_Tset_cool = 24
+
+[[BuildingTemperatureSetPointSchedule.Hourly]]
+Hour = "18:00"
+WD_Tset_heat = 20
+WE_Tset_heat = 20
+WD_Tset_cool = 24
+WE_Tset_cool = 24
+
+[[BuildingTemperatureSetPointSchedule.Hourly]]
+Hour = "19:00"
+WD_Tset_heat = 20
+WE_Tset_heat = 20
+WD_Tset_cool = 24
+WE_Tset_cool = 24
+
+[[BuildingTemperatureSetPointSchedule.Hourly]]
+Hour = "20:00"
+WD_Tset_heat = 20
+WE_Tset_heat = 20
+WD_Tset_cool = 24
+WE_Tset_cool = 24
+
+[[BuildingTemperatureSetPointSchedule.Hourly]]
+Hour = "21:00"
+WD_Tset_heat = 20
+WE_Tset_heat = 20
+WD_Tset_cool = 24
+WE_Tset_cool = 24
+
+[[BuildingTemperatureSetPointSchedule.Hourly]]
+Hour = "22:00"
+WD_Tset_heat = 20
+WE_Tset_heat = 20
+WD_Tset_cool = 24
+WE_Tset_cool = 24
+
+[[BuildingTemperatureSetPointSchedule.Hourly]]
+Hour = "23:00"
+WD_Tset_heat = 20
+WE_Tset_heat = 20
+WD_Tset_cool = 24
+WE_Tset_cool = 24
+
+[Zone.Zone1]
+SpaceName = "Living Room"
+GrossFloorArea_m2 = 37.67
+Occupancy_m2PerPerson = 10000
+MetabolicRate_WPerPerson = 70
+Appliance_WPerM2 = 26.55
+Lighting_WPerM2 = 0
+OutdoorAir_LitersPerSecondPerPerson = 0
+DHW_LitersPerM2PerMonth = 2
+
+[ZoneSchedules.Zone1]
+# 24 hourly entries for occupancy, appliances, lighting:
+[[ZoneSchedules.Zone1.Hourly]]
+Hour = "00:00"
+Occ_WD = 0.3
+Occ_WE = 0.5
+App_WD = 0.4
+App_WE = 0.6
+Light_WD = 0.5
+Light_WE = 0.7
+
+[[ZoneSchedules.Zone1.Hourly]]
+Hour = "01:00"
+Occ_WD = 0.3
+Occ_WE = 0.5
+App_WD = 0.4
+App_WE = 0.6
+Light_WD = 0.5
+Light_WE = 0.7
+
+[[ZoneSchedules.Zone1.Hourly]]
+Hour = "02:00"
+Occ_WD = 0.3
+Occ_WE = 0.5
+App_WD = 0.4
+App_WE = 0.6
+Light_WD = 0.5
+Light_WE = 0.7
+
+[[ZoneSchedules.Zone1.Hourly]]
+Hour = "03:00"
+Occ_WD = 0.3
+Occ_WE = 0.5
+App_WD = 0.4
+App_WE = 0.6
+Light_WD = 0.5
+Light_WE = 0.7
+
+[[ZoneSchedules.Zone1.Hourly]]
+Hour = "04:00"
+Occ_WD = 0.3
+Occ_WE = 0.5
+App_WD = 0.4
+App_WE = 0.6
+Light_WD = 0.5
+Light_WE = 0.7
+
+[[ZoneSchedules.Zone1.Hourly]]
+Hour = "05:00"
+Occ_WD = 0.3
+Occ_WE = 0.5
+App_WD = 0.4
+App_WE = 0.6
+Light_WD = 0.5
+Light_WE = 0.7
+
+[[ZoneSchedules.Zone1.Hourly]]
+Hour = "06:00"
+Occ_WD = 0.3
+Occ_WE = 0.5
+App_WD = 0.4
+App_WE = 0.6
+Light_WD = 0.5
+Light_WE = 0.7
+
+[[ZoneSchedules.Zone1.Hourly]]
+Hour = "07:00"
+Occ_WD = 0.4
+Occ_WE = 0.6
+App_WD = 0.5
+App_WE = 0.7
+Light_WD = 0.6
+Light_WE = 0.8
+
+[[ZoneSchedules.Zone1.Hourly]]
+Hour = "08:00"
+Occ_WD = 0.4
+Occ_WE = 0.6
+App_WD = 0.5
+App_WE = 0.7
+Light_WD = 0.6
+Light_WE = 0.8
+
+[[ZoneSchedules.Zone1.Hourly]]
+Hour = "09:00"
+Occ_WD = 0.4
+Occ_WE = 0.6
+App_WD = 0.5
+App_WE = 0.7
+Light_WD = 0.6
+Light_WE = 0.8
+
+[[ZoneSchedules.Zone1.Hourly]]
+Hour = "10:00"
+Occ_WD = 0.4
+Occ_WE = 0.6
+App_WD = 0.5
+App_WE = 0.7
+Light_WD = 0.6
+Light_WE = 0.8
+
+[[ZoneSchedules.Zone1.Hourly]]
+Hour = "11:00"
+Occ_WD = 0.4
+Occ_WE = 0.6
+App_WD = 0.5
+App_WE = 0.7
+Light_WD = 0.6
+Light_WE = 0.8
+
+[[ZoneSchedules.Zone1.Hourly]]
+Hour = "12:00"
+Occ_WD = 0.4
+Occ_WE = 0.6
+App_WD = 0.5
+App_WE = 0.7
+Light_WD = 0.6
+Light_WE = 0.8
+
+[[ZoneSchedules.Zone1.Hourly]]
+Hour = "13:00"
+Occ_WD = 0.4
+Occ_WE = 0.6
+App_WD = 0.5
+App_WE = 0.7
+Light_WD = 0.6
+Light_WE = 0.8
+
+[[ZoneSchedules.Zone1.Hourly]]
+Hour = "14:00"
+Occ_WD = 0.4
+Occ_WE = 0.6
+App_WD = 0.5
+App_WE = 0.7
+Light_WD = 0.6
+Light_WE = 0.8
+
+[[ZoneSchedules.Zone1.Hourly]]
+Hour = "15:00"
+Occ_WD = 0.4
+Occ_WE = 0.6
+App_WD = 0.5
+App_WE = 0.7
+Light_WD = 0.6
+Light_WE = 0.8
+
+[[ZoneSchedules.Zone1.Hourly]]
+Hour = "16:00"
+Occ_WD = 0.4
+Occ_WE = 0.6
+App_WD = 0.5
+App_WE = 0.7
+Light_WD = 0.6
+Light_WE = 0.8
+
+[[ZoneSchedules.Zone1.Hourly]]
+Hour = "17:00"
+Occ_WD = 0.3
+Occ_WE = 0.5
+App_WD = 0.4
+App_WE = 0.6
+Light_WD = 0.5
+Light_WE = 0.7
+
+[[ZoneSchedules.Zone1.Hourly]]
+Hour = "18:00"
+Occ_WD = 0.3
+Occ_WE = 0.5
+App_WD = 0.4
+App_WE = 0.6
+Light_WD = 0.5
+Light_WE = 0.7
+
+[[ZoneSchedules.Zone1.Hourly]]
+Hour = "19:00"
+Occ_WD = 0.3
+Occ_WE = 0.5
+App_WD = 0.4
+App_WE = 0.6
+Light_WD = 0.5
+Light_WE = 0.7
+
+[[ZoneSchedules.Zone1.Hourly]]
+Hour = "20:00"
+Occ_WD = 0.3
+Occ_WE = 0.5
+App_WD = 0.4
+App_WE = 0.6
+Light_WD = 0.5
+Light_WE = 0.7
+
+[[ZoneSchedules.Zone1.Hourly]]
+Hour = "21:00"
+Occ_WD = 0.3
+Occ_WE = 0.5
+App_WD = 0.4
+App_WE = 0.6
+Light_WD = 0.5
+Light_WE = 0.7
+
+[[ZoneSchedules.Zone1.Hourly]]
+Hour = "22:00"
+Occ_WD = 0.3
+Occ_WE = 0.5
+App_WD = 0.4
+App_WE = 0.6
+Light_WD = 0.5
+Light_WE = 0.7
+
+[[ZoneSchedules.Zone1.Hourly]]
+Hour = "23:00"
+Occ_WD = 0.3
+Occ_WE = 0.5
+App_WD = 0.4
+App_WE = 0.6
+Light_WD = 0.5
+Light_WE = 0.7
+
+[Envelope.S]
+Opaque1_Area_m2 = 7.5
+Opaque2_Area_m2 = 0
+Window1_Area_m2 = 4.2
+Window1_OverhangAngle_degree = 0
+Window1_FinAngle_degree = 0
+Window1_HorizonAngle_degree = 0
+Window1_SRF2 = 1.0
+Window2_Area_m2 = 0
+Window2_OverhangAngle_degree = 0
+Window2_FinAngle_degree = 0
+Window2_HorizonAngle_degree = 0
+Window2_SRF2 = 1.0
+
+[Envelope.SE]
+Opaque1_Area_m2 = 0
+Opaque2_Area_m2 = 0
+Window1_Area_m2 = 0
+Window1_OverhangAngle_degree = 0
+Window1_FinAngle_degree = 0
+Window1_HorizonAngle_degree = 0
+Window1_SRF2 = 1.0
+Window2_Area_m2 = 0
+Window2_OverhangAngle_degree = 0
+Window2_FinAngle_degree = 0
+Window2_HorizonAngle_degree = 0
+Window2_SRF2 = 1.0
+
+[Envelope.E]
+Opaque1_Area_m2 = 22.57
+Opaque2_Area_m2 = 0
+Window1_Area_m2 = 0
+Window1_OverhangAngle_degree = 0
+Window1_FinAngle_degree = 0
+Window1_HorizonAngle_degree = 0
+Window1_SRF2 = 1.0
+Window2_Area_m2 = 0
+Window2_OverhangAngle_degree = 0
+Window2_FinAngle_degree = 0
+Window2_HorizonAngle_degree = 0
+Window2_SRF2 = 1.0
+
+[Envelope.NE]
+Opaque1_Area_m2 = 0
+Opaque2_Area_m2 = 0
+Window1_Area_m2 = 0
+Window1_OverhangAngle_degree = 0
+Window1_FinAngle_degree = 0
+Window1_HorizonAngle_degree = 0
+Window1_SRF2 = 1.0
+Window2_Area_m2 = 0
+Window2_OverhangAngle_degree = 0
+Window2_FinAngle_degree = 0
+Window2_HorizonAngle_degree = 0
+Window2_SRF2 = 1.0
+
+[Envelope.N]
+Opaque1_Area_m2 = 11.70
+Opaque2_Area_m2 = 0
+Window1_Area_m2 = 0
+Window1_OverhangAngle_degree = 0
+Window1_FinAngle_degree = 0
+Window1_HorizonAngle_degree = 0
+Window1_SRF2 = 1.0
+Window2_Area_m2 = 0
+Window2_OverhangAngle_degree = 0
+Window2_FinAngle_degree = 0
+Window2_HorizonAngle_degree = 0
+Window2_SRF2 = 1.0
+
+[Envelope.NW]
+Opaque1_Area_m2 = 0
+Opaque2_Area_m2 = 0
+Window1_Area_m2 = 0
+Window1_OverhangAngle_degree = 0
+Window1_FinAngle_degree = 0
+Window1_HorizonAngle_degree = 0
+Window1_SRF2 = 1.0
+Window2_Area_m2 = 0
+Window2_OverhangAngle_degree = 0
+Window2_FinAngle_degree = 0
+Window2_HorizonAngle_degree = 0
+Window2_SRF2 = 1.0
+
+[Envelope.W]
+Opaque1_Area_m2 = 22.57
+Opaque2_Area_m2 = 0
+Window1_Area_m2 = 0
+Window1_OverhangAngle_degree = 0
+Window1_FinAngle_degree = 0
+Window1_HorizonAngle_degree = 0
+Window1_SRF2 = 1.0
+Window2_Area_m2 = 0
+Window2_OverhangAngle_degree = 0
+Window2_FinAngle_degree = 0
+Window2_HorizonAngle_degree = 0
+Window2_SRF2 = 1.0
+
+[Envelope.SW]
+Opaque1_Area_m2 = 0
+Opaque2_Area_m2 = 0
+Window1_Area_m2 = 0
+Window1_OverhangAngle_degree = 0
+Window1_FinAngle_degree = 0
+Window1_HorizonAngle_degree = 0
+Window1_SRF2 = 1.0
+Window2_Area_m2 = 0
+Window2_OverhangAngle_degree = 0
+Window2_FinAngle_degree = 0
+Window2_HorizonAngle_degree = 0
+Window2_SRF2 = 1.0
+
+[Envelope.RoofHor]
+Opaque1_Area_m2 = 35.113
+Opaque2_Area_m2 = 0
+Window1_Area_m2 = 0
+Window1_SRF2 = 1.0
+Window2_Area_m2 = 0
+Window2_SRF2 = 1.0
+
+[Envelope.BelowGrade]
+Opaque1_Area_m2 = 50
+Opaque2_Area_m2 = 0
+
+[Material.Roof1]
+Uvalue_WPerM2K = 0.0611
+AbsorptionCoefficient = 0.5
+Emissivity = 0.9
+
+[Material.Roof2]
+Uvalue_WPerM2K = 0.3
+AbsorptionCoefficient = 0.4
+Emissivity = 0.8
+
+[Material.Opaque1]
+Uvalue_WPerM2K = 0.244
+AbsorptionCoefficient = 0.5
+Emissivity = 0.9
+
+[Material.Opaque2]
+Uvalue_WPerM2K = 0.4
+AbsorptionCoefficient = 0.5
+Emissivity = 0.85
+
+[Material.Window1]
+Uvalue_WPerM2K = 1.265
+Emissivity = 0.85
+SolarTransmittance = 0.4
+
+[Material.Window2]
+Uvalue_WPerM2K = 1.5
+Emissivity = 0.9
+SolarTransmittance = 0.4
+
+[CostInformation]
+AnnualEnergySaving_kW = 0
+TaxCredits_USD = 0
+ExpectedRateOfRiseInEnergyCosts = 0.03
+AnnualRecurringCost_Materials_USD = 0
+AnnualRecurringCost_Maintenance_USD = 0
+InitialExtraInvestment_USD = 0
+DiscountRate = 0.05
+ElectricityPrice_USD = 0.12

@@ -1,0 +1,8 @@
+HPXML Data Dictionary:
+https://hpxml.nrel.gov/datadictionary/4.2.0/Building
+
+HPXML Description: 
+https://openstudio-hpxml.readthedocs.io/en/latest/workflow_inputs.html#hpxml-building
+
+HPXML XSD:
+https://github.com/NREL/OpenStudio-HPXML/blob/master/HPXMLtoOpenStudio/resources/hpxml_schema/HPXML.xsd
