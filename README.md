@@ -10,9 +10,9 @@
 ---
 
 ### 📘 Overview
-**BEMEval-Res** is the residential benchmark of the open-source **BEMEval** framework — a standardized dataset and evaluation suite for testing large language models (LLMs) on **building energy modeling (BEM)** tasks.
+**BEMEval-Res** is the residential benchmark of the open-source **BEMEval** framework — a standardized dataset and evaluation suite for evaluating large language models (LLMs) performance on **building energy modeling (BEM)** tasks.
 
-The benchmark focuses on translating *unstructured building descriptions* into *structured energy modeling schemas*, enabling consistent and reproducible evaluation of AI models in the BEM domain.
+The benchmark focuses on translating *unstructured building descriptions* into *structured/machine-readable energy modeling schemas*, enabling consistent and reproducible evaluation of AI models in the BEM domain.
 
 ---
 
