@@ -4,7 +4,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.10+-blue.svg)]()
-[![Dataset](https://img.shields.io/badge/dataset-JSON-lightgrey.svg)]()
+[![Dataset](https://img.shields.io/badge/dataset-TOML%20%7C%20XML-lightgrey.svg)]()
 [![BEMEval](https://img.shields.io/badge/project-BEMEval-orange.svg)]()
 
 ---
