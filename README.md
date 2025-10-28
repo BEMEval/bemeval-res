@@ -16,6 +16,39 @@ The benchmark focuses on translating *unstructured building descriptions* into *
 
 ---
 
+### 📁 Folder Structure
+
+```
+bemeval-res/
+├── data/
+│   ├── datasets/          # Benchmark building cases
+│   │   ├── l100/          # HERS L100 test case
+│   │   │   ├── input/     # Building descriptions (text)
+│   │   │   └── output/    # HPXML reference outputs
+│   │   ├── nzertf/        # NIST Net-Zero Energy Residential Test Facility
+│   │   │   ├── input/     # Building specifications (xlsx)
+│   │   │   └── output/    # HPXML reference outputs
+│   │   └── iunit/         # NREL iUnit (multifamily)
+│   │       ├── input/     # Building specifications (xlsx)
+│   │       └── output/    # EPC-Schema reference outputs (TOML)
+│   └── metadata/          # Schema definitions and references
+│       ├── epc-schema/    # EPC-Schema specification
+│       │   ├── epc_schema.json
+│       │   ├── epc_schema_descriptions.json
+│       │   └── references/  # Supporting documentation and diagrams
+│       └── hpxml/         # HPXML schema files
+│           ├── HPXML.xsd
+│           └── HPXML.txt
+├── evaluation/            # Evaluation scripts and metrics
+│   ├── __init__.py
+│   └── evaluate.py        # KVOR metric implementation
+├── docs/                  # Documentation
+│   └── getting_started.md
+└── pyproject.toml        # Project configuration
+```
+
+---
+
 ### 🧩 Key Features
 - **Multiple Schemas** – Includes both **industry** and **research** schemas:
   - [HPXML](https://hpxml.nrel.gov/) – consensus residential schema for home energy modeling
